@@ -4,8 +4,15 @@ import { newId } from './util';
 
 export function addSpool(spool: Omit<Spool, 'id' | 'addedAt'>): string {
   const id = newId();
+  const loaded = spool.location.kind !== 'storage';
   mutate((inv) => {
-    inv.spools.unshift({ ...spool, id, addedAt: new Date().toISOString() });
+    inv.spools.unshift({
+      ...spool,
+      id,
+      addedAt: new Date().toISOString(),
+      // Putting it straight into a printer means it is open, whatever the form said.
+      ...(loaded && spool.sealed ? { sealed: false, openedAt: new Date().toISOString() } : {}),
+    });
     // A refill that arrives already on a reusable spool takes one from the pool.
     if (spool.form === 'refill' && spool.mounted) inv.emptySpools = Math.max(0, inv.emptySpools - 1);
   }, `Add ${spool.brand} ${spool.material} ${spool.colorName}`);
@@ -42,8 +49,36 @@ export function setLocation(id: string, location: Location): void {
       }
     }
     const spool = inv.spools.find((s) => s.id === id);
-    if (spool) spool.location = location;
+    if (!spool) return;
+    // Putting a spool in a printer means you opened it to get it there.
+    if (location.kind !== 'storage' && spool.sealed) {
+      spool.sealed = false;
+      spool.openedAt = spool.openedAt ?? new Date().toISOString();
+    }
+    spool.location = location;
   }, 'Move spool');
+}
+
+/** Ran out: still in the inventory so you know to reorder, but no longer sealed. */
+export function markEmpty(id: string): void {
+  mutate((inv) => {
+    const spool = inv.spools.find((s) => s.id === id);
+    if (!spool) return;
+    spool.sealed = false;
+    spool.openedAt = spool.openedAt ?? new Date().toISOString();
+    spool.remainingPct = 0;
+  }, 'Mark spool empty');
+}
+
+/** Opening a spool is what lets it have a level, a dry state and a location. */
+export function setSealed(id: string, sealed: boolean): void {
+  mutate((inv) => {
+    const spool = inv.spools.find((s) => s.id === id);
+    if (!spool) return;
+    spool.sealed = sealed;
+    if (sealed) spool.openedAt = undefined;
+    else spool.openedAt = spool.openedAt ?? new Date().toISOString();
+  }, sealed ? 'Mark spool sealed' : 'Mark spool opened');
 }
 
 export function mountRefill(id: string): void {

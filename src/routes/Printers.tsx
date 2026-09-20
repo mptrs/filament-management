@@ -139,7 +139,7 @@ function SlotTile({ printer, slot, spool }: { printer: Printer; slot: number; sp
 
   if (!spool) {
     return (
-      <a class="slot slot--empty" href={href(`/add?printer=${printer.id}&slot=${slot}`)}>
+      <a class="slot slot--empty" href={href(`/load/${printer.id}/${slot}`)}>
         <div class="row">
           <span
             class="swatch"

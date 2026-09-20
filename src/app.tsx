@@ -8,6 +8,7 @@ import { AddSpool } from './routes/AddSpool';
 import { Refills } from './routes/Refills';
 import { PrinterList } from './routes/PrinterList';
 import { PrinterEdit } from './routes/PrinterEdit';
+import { LoadSlot } from './routes/LoadSlot';
 import { Connect } from './routes/Connect';
 
 export function App(): JSX.Element {
@@ -30,6 +31,9 @@ export function App(): JSX.Element {
 
   const printer = match('/printer/:id', path);
   if (printer) return <PrinterEdit id={printer.id} />;
+
+  const load = match('/load/:printer/:slot', path);
+  if (load) return <LoadSlot printerId={load.printer} slot={Number(load.slot)} />;
 
   switch (path) {
     case '/inventory':

@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'preact/compat';
-import type { Inventory } from './types';
+import { reconcile, type Inventory } from './types';
 import { detectRepo, emptyInventory, readToken, writeToken, type RepoRef } from './config';
 import { ConflictError, MissingFileError, fetchInventory, pushInventory } from './github';
 
@@ -95,6 +95,7 @@ export function canEdit(s: AppState = state): boolean {
 export function mutate(fn: (draft: Inventory) => void, message = 'Update inventory'): void {
   const next = structuredClone(state.inv);
   fn(next);
+  reconcile(next);
   next.updatedAt = new Date().toISOString();
   set({ inv: next, pending: state.pending + 1, conflict: false }, true);
   schedulePush(message);

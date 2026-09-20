@@ -30,7 +30,23 @@ export function pctColor(pct: number): string {
   return pct <= 15 ? 'var(--red-text)' : pct <= 30 ? 'var(--accent)' : 'var(--text-2)';
 }
 
-export function BackButton({ to, label }: { to?: string; label: string }): JSX.Element {
+export function BackButton({
+  to,
+  label,
+  onBack,
+}: {
+  to?: string;
+  label: string;
+  /** For going back a step inside one screen, where the URL does not change. */
+  onBack?: () => void;
+}): JSX.Element {
+  if (onBack) {
+    return (
+      <button type="button" class="iconbtn" aria-label={label} onClick={onBack}>
+        <Icon name="chevronLeft" />
+      </button>
+    );
+  }
   return (
     <a
       class="iconbtn"

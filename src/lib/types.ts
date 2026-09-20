@@ -80,3 +80,62 @@ export function needsSpool(s: Spool): boolean {
 export function remainingGrams(s: Spool): number {
   return Math.round((s.netWeightG * s.remainingPct) / 100);
 }
+
+/**
+ * Forces the inventory back into states that can exist in the real world.
+ * Runs after every mutation, so no screen can leave a contradiction behind.
+ *
+ * The rules, and why:
+ *  - A sealed spool is unopened, so it is full, dry, has no opened date, and
+ *    cannot be in a printer. Loading or emptying one opens it first.
+ *  - `mounted` only means anything for a refill.
+ *  - A refill with no spool under it physically cannot be in a printer.
+ *  - One slot holds one spool.
+ */
+export function reconcile(inv: Inventory): void {
+  inv.emptySpools = Math.max(0, Math.round(inv.emptySpools));
+
+  for (const spool of inv.spools) {
+    spool.remainingPct = Math.max(0, Math.min(100, Math.round(spool.remainingPct)));
+
+    if (spool.form === 'spool') spool.mounted = false;
+
+    if (spool.form === 'refill' && !spool.mounted && spool.location.kind !== 'storage') {
+      spool.location = { kind: 'storage' };
+    }
+
+    if (spool.sealed) {
+      spool.remainingPct = 100;
+      spool.openedAt = undefined;
+      spool.dryState = 'dry';
+      if (spool.location.kind !== 'storage') spool.location = { kind: 'storage' };
+    }
+  }
+
+  // A printer that no longer exists, or a slot beyond the current AMS size,
+  // is not a place a spool can be.
+  const byId = new Map(inv.printers.map((p) => [p.id, p]));
+  const taken = new Set<string>();
+  for (const spool of inv.spools) {
+    const loc = spool.location;
+    if (loc.kind === 'storage') continue;
+
+    const printer = byId.get(loc.printer);
+    if (!printer) {
+      spool.location = { kind: 'storage' };
+      continue;
+    }
+    if (loc.kind === 'ams' && (printer.amsUnits === 0 || loc.slot < 1 || loc.slot > totalSlots(printer))) {
+      spool.location = { kind: 'storage' };
+      continue;
+    }
+    if (loc.kind === 'direct' && printer.amsUnits > 0) {
+      spool.location = { kind: 'storage' };
+      continue;
+    }
+
+    const key = loc.kind === 'ams' ? `${loc.printer}:${loc.slot}` : loc.printer;
+    if (taken.has(key)) spool.location = { kind: 'storage' };
+    else taken.add(key);
+  }
+}

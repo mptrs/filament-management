@@ -8,8 +8,10 @@ import {
   deleteSpool,
   encodeLocation,
   locationOptions,
+  markEmpty,
   mountRefill,
   setLocation,
+  setSealed,
   unmountRefill,
   updateSpool,
 } from '../lib/actions';
@@ -39,7 +41,11 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
     );
   }
 
-  const options = locationOptions(inv.printers);
+  const grounded = spool.form === 'refill' && !spool.mounted;
+  // A refill with nothing to wind it onto can only sit in storage.
+  const options = grounded
+    ? locationOptions(inv.printers).filter((o) => o.value === 'storage')
+    : locationOptions(inv.printers);
   const formValue = spool.form === 'spool' ? 'spool' : spool.mounted ? 'refill-mounted' : 'refill';
 
   const onFormChange = (value: string): void => {
@@ -91,6 +97,11 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
             </span>
             <span class="muted">≈ {remainingGrams(spool)} g</span>
           </div>
+          {spool.sealed && (
+            <div class="muted" style={{ marginTop: '6px' }}>
+              Sealed, so it counts as full. Mark it opened to set a level.
+            </div>
+          )}
           <input
             id="rem"
             class="range"
@@ -98,6 +109,7 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
             min={0}
             max={100}
             step={1}
+            disabled={spool.sealed}
             value={spool.remainingPct}
             style={{
               marginTop: '14px',
@@ -120,20 +132,14 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
             <button
               type="button"
               data-on={spool.sealed}
-              onClick={() => updateSpool(spool.id, { sealed: true, openedAt: undefined }, 'Mark spool sealed')}
+              onClick={() => setSealed(spool.id, true)}
             >
               Sealed
             </button>
             <button
               type="button"
               data-on={!spool.sealed}
-              onClick={() =>
-                updateSpool(
-                  spool.id,
-                  { sealed: false, openedAt: spool.openedAt ?? new Date().toISOString() },
-                  'Mark spool opened',
-                )
-              }
+              onClick={() => setSealed(spool.id, false)}
             >
               Opened
             </button>
@@ -145,6 +151,9 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
           <span class="label" style={{ marginBottom: '8px' }}>
             Moisture
           </span>
+          {spool.sealed ? (
+            <div class="card card--quiet muted">Still sealed, so it is dry. This matters once you open it.</div>
+          ) : (
           <div class="row" style={{ gap: '7px' }}>
             {DRY_STATES.map((d) => (
               <button
@@ -165,6 +174,7 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
               </button>
             ))}
           </div>
+          )}
         </div>
 
         <div class="row" style={{ marginTop: '14px', gap: '10px', alignItems: 'flex-start' }}>
@@ -197,10 +207,14 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
           </div>
         </div>
 
-        {spool.form === 'refill' && !spool.mounted && inv.emptySpools === 0 && (
+        {grounded && (
           <div style={{ marginTop: '12px' }}>
             <Note tone="warn" icon="warn">
-              No empty spools free, so this refill cannot be used yet. <a href={href('/refills')}>Manage spools</a>
+              A refill with no spool under it can only sit in storage.{' '}
+              {inv.emptySpools === 0
+                ? 'No empty spools are free.'
+                : `${inv.emptySpools} empty ${inv.emptySpools === 1 ? 'spool is' : 'spools are'} free.`}{' '}
+              <a href={href('/refills')}>Mount it</a>
             </Note>
           </div>
         )}
@@ -223,7 +237,7 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
           <button
             type="button"
             class="btn btn--ghost grow"
-            onClick={() => updateSpool(spool.id, { remainingPct: 0 }, 'Mark spool empty')}
+            onClick={() => markEmpty(spool.id)}
           >
             Mark empty
           </button>

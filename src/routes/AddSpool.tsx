@@ -59,7 +59,7 @@ export function AddSpool(): JSX.Element {
     return (
       <div class="screen">
         <header class="topbar">
-          <BackButton to="/add" label="Back to colour" />
+          <BackButton label="Back to colour" onBack={() => setStep(1)} />
           <div class="topbar__title">Spool details</div>
           <span class="muted">2 of 2</span>
         </header>
