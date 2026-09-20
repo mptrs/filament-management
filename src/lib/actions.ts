@@ -59,6 +59,14 @@ export function setLocation(id: string, location: Location): void {
   }, 'Move spool');
 }
 
+/** Takes a spool out of a printer or AMS slot and back to storage. */
+export function unloadSpool(id: string): void {
+  mutate((inv) => {
+    const spool = inv.spools.find((s) => s.id === id);
+    if (spool) spool.location = { kind: 'storage' };
+  }, 'Unload spool');
+}
+
 /** Ran out: still in the inventory so you know to reorder, but no longer sealed. */
 export function markEmpty(id: string): void {
   mutate((inv) => {

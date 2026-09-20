@@ -3,7 +3,8 @@ import { useApp } from '../lib/store';
 import { href } from '../lib/router';
 import { totalSlots, type Printer, type Spool } from '../lib/types';
 import { Bar, Icon, Note, Swatch, TabBar, pctColor } from '../components/ui';
-import { relativeTime, shortDate } from '../lib/util';
+import { unloadSpool } from '../lib/actions';
+import { relativeTime } from '../lib/util';
 
 const LOW_PCT = 15;
 
@@ -140,48 +141,48 @@ function SlotTile({ printer, slot, spool }: { printer: Printer; slot: number; sp
   if (!spool) {
     return (
       <a class="slot slot--empty" href={href(`/load/${printer.id}/${slot}`)}>
-        <div class="row">
-          <span
-            class="swatch"
-            style={{ width: '28px', height: '28px', borderRadius: '8px', background: 'transparent', boxShadow: 'inset 0 0 0 1px var(--line)' }}
-          />
-          <span class="grow" />
-          <span class="mono" style={{ fontSize: '10.5px', color: 'var(--faint)' }}>
-            {tag}
-          </span>
-        </div>
+        <span
+          class="swatch"
+          style={{ width: '28px', height: '28px', borderRadius: '8px', background: 'transparent', boxShadow: 'inset 0 0 0 1px var(--line)' }}
+        />
         <div class="slot__name" style={{ color: 'var(--faint)' }}>
           Empty
         </div>
         <div class="slot__sub">Tap to load</div>
+        <div class="row" style={{ gap: '7px', marginTop: '9px' }}>
+          <span class="mono slot__tag">{tag}</span>
+        </div>
       </a>
     );
   }
 
   return (
-    <a class="slot" data-low={spool.remainingPct <= LOW_PCT} href={href(`/spool/${spool.id}`)}>
-      <div class="row">
+    <div class="slot slot--filled" data-low={spool.remainingPct <= LOW_PCT}>
+      {/* The tile is the link; eject sits over its corner as a real button,
+          so one tap at the machine takes the roll out. */}
+      <a class="slot__link" href={href(`/spool/${spool.id}`)}>
         <Swatch hex={spool.hex} size={28} radius={8} />
-        <span class="grow" />
-        <span class="mono" style={{ fontSize: '10.5px', color: 'var(--faint)' }}>
-          {tag}
-        </span>
-      </div>
-      <div class="slot__name truncate">{spool.colorName}</div>
-      <div class="slot__sub truncate">
-        {spool.brand} · {spool.material}
-      </div>
-      <div class="row" style={{ gap: '7px', marginTop: '9px' }}>
-        <Bar pct={spool.remainingPct} />
-        <span class="mono" style={{ fontSize: '10.5px', color: pctColor(spool.remainingPct) }}>
-          {spool.remainingPct}%
-        </span>
-      </div>
-      {spool.openedAt && printer.amsUnits === 0 && (
-        <div class="slot__sub" style={{ marginTop: '4px' }}>
-          opened {shortDate(spool.openedAt)}
+        <div class="slot__name truncate">{spool.colorName}</div>
+        <div class="slot__sub truncate">
+          {spool.brand} · {spool.material}
         </div>
-      )}
-    </a>
+        <div class="row" style={{ gap: '7px', marginTop: '9px' }}>
+          <span class="mono slot__tag">{tag}</span>
+          <Bar pct={spool.remainingPct} />
+          <span class="mono" style={{ fontSize: '10.5px', color: pctColor(spool.remainingPct) }}>
+            {spool.remainingPct}%
+          </span>
+        </div>
+      </a>
+      <button
+        type="button"
+        class="slot__eject"
+        aria-label={`Unload ${spool.colorName} from ${printer.name} ${tag}`}
+        title="Unload to storage"
+        onClick={() => unloadSpool(spool.id)}
+      >
+        <Icon name="eject" size={15} />
+      </button>
+    </div>
   );
 }

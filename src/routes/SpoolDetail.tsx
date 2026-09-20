@@ -1,7 +1,7 @@
 import type { JSX } from 'preact';
 import { useApp } from '../lib/store';
 import { back, href } from '../lib/router';
-import { remainingGrams, type DryState } from '../lib/types';
+import { isLoaded, locationText, remainingGrams, type DryState } from '../lib/types';
 import { BackButton, Icon, Note, pctColor } from '../components/ui';
 import {
   decodeLocation,
@@ -12,6 +12,7 @@ import {
   mountRefill,
   setLocation,
   setSealed,
+  unloadSpool,
   unmountRefill,
   updateSpool,
 } from '../lib/actions';
@@ -206,6 +207,18 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
             </select>
           </div>
         </div>
+
+        {isLoaded(spool) && (
+          <button
+            type="button"
+            class="btn btn--ghost btn--block row"
+            style={{ marginTop: '12px', justifyContent: 'center', gap: '9px' }}
+            onClick={() => unloadSpool(spool.id)}
+          >
+            <Icon name="eject" size={16} />
+            <span>Take out of {locationText(inv, spool.location)}</span>
+          </button>
+        )}
 
         {grounded && (
           <div style={{ marginTop: '12px' }}>
