@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "printers": [
+    {
+      "id": "maker-bee",
+      "name": "Maker Bee",
+      "model": "Bambu Lab P1S",
+      "amsUnits": 1,
+      "slotsPerUnit": 4
+    },
+    {
+      "id": "maker-ant",
+      "name": "Maker Ant",
+      "model": "Bambu Lab A1 mini",
+      "amsUnits": 0,
+      "slotsPerUnit": 4
+    }
+  ],
+  "spools": [],
+  "emptySpools": 0,
+  "updatedAt": "2026-09-20T00:00:00.000Z"
+}
