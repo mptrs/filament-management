@@ -44,6 +44,7 @@ const RANGES = {
     [/^Aero /i, 'PLA Aero', true],
     [/^Support/i, 'Support', false],
     [/ Sparkle$/i, 'PLA Sparkle', false],
+    [/PLA\/?CF|Carbon Fi/i, 'PLA-CF', false],
     [/ Galaxy$|^Galaxy /i, 'PLA Galaxy', false],
     [/Marble/i, 'PLA Marble', false],
     [/Metal/i, 'PLA Metal', false],
@@ -76,6 +77,9 @@ const FAMILY = {
 function normalise(entry) {
   const brand = BRANDS[entry.brand] ?? entry.brand.trim();
   let color = entry.color.trim();
+  // Bambu spell it "Gray" in their own tables; a source using "Grey" would
+  // otherwise sit beside it as a second, identical colour.
+  if (brand === 'Bambu Lab') color = color.replace(/\bGrey\b/g, 'Gray');
   let material = entry.material.trim();
 
   // Only re-file entries that came in under a bare family; a source that

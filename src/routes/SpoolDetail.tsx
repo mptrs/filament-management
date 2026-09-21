@@ -74,7 +74,11 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
 
       <div class="screen__body">
         <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line)' }}>
-          <div style={{ height: '76px', background: swatchBackground(spool.hex, spool.hexes) }} />
+          <a
+            href={href(`/recolor/${spool.id}`)}
+            aria-label="Change colour"
+            style={{ display: 'block', height: '76px', background: swatchBackground(spool.hex, spool.hexes) }}
+          />
           <div class="row" style={{ background: 'var(--surface)', padding: '12px 14px' }}>
             <div class="grow">
               <div style={{ fontFamily: 'var(--display)', fontSize: '18px', fontWeight: 700 }}>{spool.colorName}</div>
@@ -82,9 +86,13 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
                 {spool.brand} · {spool.material} · {spool.netWeightG} g
               </div>
             </div>
-            <div class="mono" style={{ fontSize: '11.5px', color: 'var(--dim)', background: 'var(--surface-2)', border: '1px solid var(--line)', borderRadius: '7px', padding: '5px 9px' }}>
-              {spool.hex.toUpperCase()}
-            </div>
+            <a
+              href={href(`/recolor/${spool.id}`)}
+              class="mono"
+              style={{ fontSize: '11.5px', color: 'var(--dim)', background: 'var(--surface-2)', border: '1px solid var(--line)', borderRadius: '7px', padding: '5px 9px' }}
+            >
+              {spool.hexes ? `${spool.hexes.length} colours` : spool.hex.toUpperCase()}
+            </a>
           </div>
         </div>
 

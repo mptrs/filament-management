@@ -9,6 +9,7 @@ import { Refills } from './routes/Refills';
 import { PrinterList } from './routes/PrinterList';
 import { PrinterEdit } from './routes/PrinterEdit';
 import { LoadSlot } from './routes/LoadSlot';
+import { Recolor } from './routes/Recolor';
 import { Connect } from './routes/Connect';
 
 export function App(): JSX.Element {
@@ -34,6 +35,9 @@ export function App(): JSX.Element {
 
   const load = match('/load/:printer/:slot', path);
   if (load) return <LoadSlot printerId={load.printer} slot={Number(load.slot)} />;
+
+  const recolor = match('/recolor/:id', path);
+  if (recolor) return <Recolor id={recolor.id} />;
 
   switch (path) {
     case '/inventory':

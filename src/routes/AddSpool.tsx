@@ -2,18 +2,10 @@ import type { JSX } from 'preact';
 import { useMemo, useState } from 'preact/hooks';
 import { useApp } from '../lib/store';
 import { navigate, query } from '../lib/router';
-import { brands, colorsFor, materialsFor } from '../lib/catalog';
 import type { Location } from '../lib/types';
-import { BackButton, Note, Swatch, TabBar, swatchBackground } from '../components/ui';
+import { BackButton, Note, Swatch } from '../components/ui';
+import { ColorPicker, type Picked } from '../components/ColorPicker';
 import { addSpool, decodeLocation, encodeLocation, locationOptions } from '../lib/actions';
-
-interface Picked {
-  brand: string;
-  material: string;
-  color: string;
-  hex: string;
-  hexes?: string[];
-}
 
 export function AddSpool(): JSX.Element {
   const { inv } = useApp();
@@ -30,18 +22,7 @@ export function AddSpool(): JSX.Element {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const [step, setStep] = useState<1 | 2>(1);
-  const [brand, setBrand] = useState(brands[0] ?? 'Bambu Lab');
-  const materials = materialsFor(brand);
-  const [material, setMaterial] = useState(materials[0] ?? 'PLA Basic');
-  const activeMaterial = materials.includes(material) ? material : (materials[0] ?? '');
-  const colors = colorsFor(brand, activeMaterial);
-  const [picked, setPicked] = useState<Picked | null>(null);
-
-  const [custom, setCustom] = useState(false);
-  const [customName, setCustomName] = useState('');
-  const [customHex, setCustomHex] = useState('#888888');
-  const [customBrand, setCustomBrand] = useState('');
+  const [selection, setSelection] = useState<Picked | null>(null);
 
   const [location, setLoc] = useState<Location>(initialLocation);
   const [form, setForm] = useState<'spool' | 'refill'>('spool');
@@ -50,17 +31,22 @@ export function AddSpool(): JSX.Element {
   const [remaining, setRemaining] = useState(100);
   const [weight, setWeight] = useState(1000);
 
-  const selection: Picked | null = custom
-    ? customName
-      ? { brand: customBrand || 'Other', material: activeMaterial || 'PLA', color: customName, hex: customHex }
-      : null
-    : picked;
-
-  if (step === 2 && selection) {
+  if (!selection) {
     return (
+      <ColorPicker
+        title="Add spool"
+        meta="1 of 2"
+        withTabBar
+        actionLabel={(s) => `Next: ${s.color}`}
+        onPick={setSelection}
+      />
+    );
+  }
+
+  return (
       <div class="screen">
         <header class="topbar">
-          <BackButton label="Back to colour" onBack={() => setStep(1)} />
+          <BackButton label="Back to colour" onBack={() => setSelection(null)} />
           <div class="topbar__title">Spool details</div>
           <span class="muted">2 of 2</span>
         </header>
@@ -211,85 +197,4 @@ export function AddSpool(): JSX.Element {
         </div>
       </div>
     );
-  }
-
-  return (
-    <div class="screen screen--tabbed">
-      <header class="topbar">
-        <div class="topbar__title">Add spool</div>
-        <span class="muted">1 of 2</span>
-      </header>
-
-      <div class="screen__body">
-        <div class="seg">
-          {brands.map((b) => (
-            <button key={b} type="button" data-on={!custom && brand === b} onClick={() => { setCustom(false); setBrand(b); setPicked(null); }}>
-              {b}
-            </button>
-          ))}
-          <button type="button" data-on={custom} onClick={() => setCustom(true)}>
-            Other
-          </button>
-        </div>
-
-        <div class="row" style={{ gap: '7px', marginTop: '12px', overflowX: 'auto', paddingBottom: '2px' }}>
-          {materials.map((m) => (
-            <button key={m} type="button" class="chip" data-on={activeMaterial === m} onClick={() => { setMaterial(m); setPicked(null); }}>
-              {m}
-            </button>
-          ))}
-        </div>
-
-        {custom ? (
-          <div style={{ marginTop: '18px' }}>
-            <label class="label" for="cb" style={{ marginBottom: '8px' }}>
-              Brand
-            </label>
-            <input id="cb" class="field" value={customBrand} placeholder="Sunlu, Polymaker, …" onInput={(e) => setCustomBrand((e.target as HTMLInputElement).value)} />
-
-            <label class="label" for="cn" style={{ margin: '14px 0 8px' }}>
-              Colour name
-            </label>
-            <input id="cn" class="field" value={customName} placeholder="Forest Green" onInput={(e) => setCustomName((e.target as HTMLInputElement).value)} />
-
-            <label class="label" for="ch" style={{ margin: '14px 0 8px' }}>
-              Colour
-            </label>
-            <div class="row" style={{ gap: '10px' }}>
-              <input id="ch" type="color" value={customHex} onInput={(e) => setCustomHex((e.target as HTMLInputElement).value)} style={{ width: '56px', height: '46px', background: 'none', border: '1px solid var(--line)', borderRadius: '11px', padding: '4px' }} />
-              <input class="field grow mono" value={customHex} onInput={(e) => setCustomHex((e.target as HTMLInputElement).value)} />
-            </div>
-          </div>
-        ) : (
-          <>
-            <div class="sectionhead">
-              <span class="label grow">Catalogue colour</span>
-              <span class="muted">{colors.length} in this range</span>
-            </div>
-            <div class="grid-colors">
-              {colors.map((c) => (
-                <button
-                  key={`${c.color}-${c.hex}`}
-                  type="button"
-                  class="colortile"
-                  data-on={picked?.color === c.color && picked?.hex === c.hex}
-                  aria-label={c.color}
-                  onClick={() => setPicked({ brand: c.brand, material: c.material, color: c.color, hex: c.hex, hexes: c.hexes })}
-                >
-                  <span class="colortile__swatch" style={{ background: swatchBackground(c.hex, c.hexes) }} />
-                  <span class="colortile__name">{c.color}</span>
-                </button>
-              ))}
-            </div>
-          </>
-        )}
-
-        <button type="button" class="btn btn--block" style={{ marginTop: '20px' }} disabled={!selection} onClick={() => setStep(2)}>
-          {selection ? `Next: ${selection.color}` : 'Pick a colour'}
-        </button>
-      </div>
-
-      <TabBar active="add" />
-    </div>
-  );
 }

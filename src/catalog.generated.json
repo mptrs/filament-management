@@ -331,7 +331,7 @@
  {
   "brand": "Bambu Lab",
   "material": "PC",
-  "color": "FR Grey",
+  "color": "FR Gray",
   "hex": "#A8A8AA",
   "source": "spoolmandb"
  },
@@ -822,13 +822,6 @@
  {
   "brand": "Bambu Lab",
   "material": "PLA Basic",
-  "color": "Black PLA/CF",
-  "hex": "#393939",
-  "source": "filamentcolors.xyz"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
   "color": "Blue",
   "hex": "#0A2989",
   "source": "bambu-official"
@@ -837,13 +830,6 @@
   "brand": "Bambu Lab",
   "material": "PLA Basic",
   "color": "Blue Gray",
-  "hex": "#5B6579",
-  "source": "spoolmandb"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Blue Grey",
   "hex": "#5B6579",
   "source": "bambu-official"
  },
@@ -983,13 +969,6 @@
   "material": "PLA Basic",
   "color": "Green",
   "hex": "#00A553",
-  "source": "filamentcolors.xyz"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Grey",
-  "hex": "#8B9398",
   "source": "filamentcolors.xyz"
  },
  {
@@ -1919,6 +1898,13 @@
   "color": "Black",
   "hex": "#000000",
   "source": "spoolmandb"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA-CF",
+  "color": "Black PLA/CF",
+  "hex": "#393939",
+  "source": "filamentcolors.xyz"
  },
  {
   "brand": "Bambu Lab",
