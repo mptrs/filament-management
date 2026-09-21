@@ -62,7 +62,7 @@ export function Refills(): JSX.Element {
             </div>
             {waiting.map((s) => (
               <div class="listrow" key={s.id}>
-                <Swatch hex={s.hex} />
+                <Swatch hex={s.hex} hexes={s.hexes} />
                 <a class="grow" href={href(`/spool/${s.id}`)} style={{ color: 'inherit' }}>
                   <span class="listrow__name truncate" style={{ display: 'block' }}>
                     {s.colorName}
@@ -92,7 +92,7 @@ export function Refills(): JSX.Element {
             </div>
             {mounted.map((s) => (
               <div class="listrow" key={s.id}>
-                <Swatch hex={s.hex} />
+                <Swatch hex={s.hex} hexes={s.hexes} />
                 <a class="grow" href={href(`/spool/${s.id}`)} style={{ color: 'inherit' }}>
                   <span class="listrow__name truncate" style={{ display: 'block' }}>
                     {s.colorName}

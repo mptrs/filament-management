@@ -2,7 +2,7 @@ import type { JSX } from 'preact';
 import { useApp } from '../lib/store';
 import { back, href } from '../lib/router';
 import { isLoaded, locationText, remainingGrams, type DryState } from '../lib/types';
-import { BackButton, Icon, Note, pctColor } from '../components/ui';
+import { BackButton, Icon, Note, pctColor, swatchBackground } from '../components/ui';
 import {
   decodeLocation,
   deleteSpool,
@@ -74,7 +74,7 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
 
       <div class="screen__body">
         <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line)' }}>
-          <div style={{ height: '76px', background: spool.hex }} />
+          <div style={{ height: '76px', background: swatchBackground(spool.hex, spool.hexes) }} />
           <div class="row" style={{ background: 'var(--surface)', padding: '12px 14px' }}>
             <div class="grow">
               <div style={{ fontFamily: 'var(--display)', fontSize: '18px', fontWeight: 700 }}>{spool.colorName}</div>

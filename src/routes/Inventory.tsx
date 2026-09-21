@@ -128,7 +128,7 @@ function SpoolRow({ spool, inv }: { spool: Spool; inv: Inv }): JSX.Element {
 
   return (
     <a class="listrow" href={href(`/spool/${spool.id}`)}>
-      <Swatch hex={spool.hex} />
+      <Swatch hex={spool.hex} hexes={spool.hexes} />
       <span class="grow">
         <span class="listrow__name truncate" style={{ display: 'block' }}>
           {spool.colorName}

@@ -2,14 +2,36 @@ import type { ComponentChildren, JSX } from 'preact';
 import { href, back as goBack } from '../lib/router';
 import { isPale } from '../lib/catalog';
 
-export function Swatch({ hex, size = 38, radius }: { hex: string; size?: number; radius?: number }): JSX.Element {
+/**
+ * A dual-colour silk is two colours side by side on the spool, so it is drawn
+ * as hard bands rather than a blend - a blend would invent a colour that is
+ * not on the reel.
+ */
+export function swatchBackground(hex: string, hexes?: string[]): string {
+  if (!hexes || hexes.length < 2) return hex;
+  const step = 100 / hexes.length;
+  const stops = hexes.map((h, i) => `${h} ${i * step}% ${(i + 1) * step}%`).join(', ');
+  return `linear-gradient(135deg, ${stops})`;
+}
+
+export function Swatch({
+  hex,
+  hexes,
+  size = 38,
+  radius,
+}: {
+  hex: string;
+  hexes?: string[];
+  size?: number;
+  radius?: number;
+}): JSX.Element {
   return (
     <span
       class="swatch"
       style={{
         width: `${size}px`,
         height: `${size}px`,
-        background: hex,
+        background: swatchBackground(hex, hexes),
         borderRadius: `${radius ?? Math.round(size / 3.5)}px`,
         boxShadow: `inset 0 0 0 1px rgba(255,255,255,${isPale(hex) ? 0.35 : 0.18})`,
       }}

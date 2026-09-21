@@ -40,21 +40,33 @@ immediately instead of waiting for a rebuild.
 
 ## The colour catalogue
 
-`src/catalog.generated.json` holds 183 colours with real hex values, so a swatch in
-the app matches what you saw when you bought the filament.
+`src/catalog.generated.json` holds 412 colours with real hex values, so a swatch
+in the app matches what you saw when you bought the filament — 310 Bambu Lab and
+102 Elegoo, across PLA, PLA Matte, Silk, Translucent, Galaxy, Sparkle, Glow,
+PETG, PETG Pro, Rapid PETG, ABS, ASA, TPU and the engineering grades.
+
+Three sources, merged in this order of authority:
 
 | Source | What it gives |
 | --- | --- |
 | Bambu Lab's published hex tables (one PDF per product line) | The official values, the ones the store shows |
-| [filamentcolors.xyz](https://filamentcolors.xyz) | Elegoo, plus Bambu ranges with no official table — measured from printed swatches |
+| [SpoolmanDB](https://github.com/Donkie/SpoolmanDB) | The broadest coverage, and the only good Elegoo data — including co-extruded multi-colour |
+| [filamentcolors.xyz](https://filamentcolors.xyz) | Measured from printed swatches; fills remaining gaps |
 
-Where a colour appears in both, the manufacturer's own value wins.
+Both community sources file everything under a bare family (`PLA`) and put the
+range in the colour name (`Matte Ivory White`, `RAPID PETG Blue`). The build
+splits those back apart, which is what stops Bambu's official *PLA Matte /
+Ivory White* and a community *PLA / Matte Ivory White* becoming two entries.
+
+Co-extruded filament keeps every colour it has. A dual-colour silk draws as hard
+bands rather than a blend, because a blend would invent a colour that is not on
+the reel.
 
 Regenerate it with:
 
 ```bash
 node scripts/build-catalog.mjs              # rebuild from data/catalog-raw.json
-node scripts/build-catalog.mjs --refresh    # also re-pull filamentcolors.xyz
+node scripts/build-catalog.mjs --refresh    # also re-pull SpoolmanDB + filamentcolors
 python3 scripts/fetch-bambu-pdfs.py         # re-parse Bambu's PDFs (needs pypdf)
 ```
 

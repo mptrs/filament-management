@@ -161,7 +161,7 @@ function SlotTile({ printer, slot, spool }: { printer: Printer; slot: number; sp
       {/* The tile is the link; eject sits over its corner as a real button,
           so one tap at the machine takes the roll out. */}
       <a class="slot__link" href={href(`/spool/${spool.id}`)}>
-        <Swatch hex={spool.hex} size={28} radius={8} />
+        <Swatch hex={spool.hex} hexes={spool.hexes} size={28} radius={8} />
         <div class="slot__name truncate">{spool.colorName}</div>
         <div class="slot__sub truncate">
           {spool.brand} · {spool.material}

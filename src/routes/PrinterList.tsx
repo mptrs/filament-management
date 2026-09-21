@@ -2,7 +2,7 @@ import type { JSX } from 'preact';
 import { useApp } from '../lib/store';
 import { href } from '../lib/router';
 import { totalSlots } from '../lib/types';
-import { BackButton, Icon, Note } from '../components/ui';
+import { BackButton, Icon, Note, swatchBackground } from '../components/ui';
 
 export function PrinterList(): JSX.Element {
   const { inv } = useApp();
@@ -24,7 +24,7 @@ export function PrinterList(): JSX.Element {
         {inv.printers.map((p) => {
           const colors = inv.spools
             .filter((s) => s.location.kind !== 'storage' && s.location.printer === p.id)
-            .map((s) => s.hex);
+            .map((s) => swatchBackground(s.hex, s.hexes));
           return (
             <a key={p.id} class="card row" href={href(`/printer/${p.id}`)} style={{ gap: '12px', marginBottom: '10px' }}>
               <span style={{ width: '44px', height: '44px', borderRadius: '12px', background: 'var(--surface-2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'var(--text-2)' }}>
@@ -41,8 +41,8 @@ export function PrinterList(): JSX.Element {
                   {colors.length === 0 ? (
                     <span class="muted">nothing loaded</span>
                   ) : (
-                    colors.map((hex, i) => (
-                      <span key={i} style={{ width: '22px', height: '10px', borderRadius: '3px', background: hex, boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.2)' }} />
+                    colors.map((background, i) => (
+                      <span key={i} style={{ width: '22px', height: '10px', borderRadius: '3px', background, boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.2)' }} />
                     ))
                   )}
                 </span>

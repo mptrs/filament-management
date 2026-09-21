@@ -73,7 +73,7 @@ export function LoadSlot({ printerId, slot }: { printerId: string; slot: number 
                 </div>
                 {ready.map((s) => (
                   <button key={s.id} type="button" class="listrow" onClick={() => load(s)}>
-                    <Swatch hex={s.hex} />
+                    <Swatch hex={s.hex} hexes={s.hexes} />
                     <span class="grow">
                       <span class="listrow__name truncate" style={{ display: 'block' }}>
                         {s.colorName}
@@ -109,7 +109,7 @@ export function LoadSlot({ printerId, slot }: { printerId: string; slot: number 
                 </div>
                 {elsewhere.map((s) => (
                   <button key={s.id} type="button" class="listrow" onClick={() => load(s)}>
-                    <Swatch hex={s.hex} />
+                    <Swatch hex={s.hex} hexes={s.hexes} />
                     <span class="grow">
                       <span class="listrow__name truncate" style={{ display: 'block' }}>
                         {s.colorName}
@@ -133,7 +133,7 @@ export function LoadSlot({ printerId, slot }: { printerId: string; slot: number 
                 </div>
                 {stuck.map((s) => (
                   <a key={s.id} class="listrow" href={href('/refills')} style={{ opacity: 0.55 }}>
-                    <Swatch hex={s.hex} />
+                    <Swatch hex={s.hex} hexes={s.hexes} />
                     <span class="grow">
                       <span class="listrow__name truncate" style={{ display: 'block' }}>
                         {s.colorName}

@@ -4,7 +4,7 @@ import { useApp } from '../lib/store';
 import { navigate, query } from '../lib/router';
 import { brands, colorsFor, materialsFor } from '../lib/catalog';
 import type { Location } from '../lib/types';
-import { BackButton, Note, Swatch, TabBar } from '../components/ui';
+import { BackButton, Note, Swatch, TabBar, swatchBackground } from '../components/ui';
 import { addSpool, decodeLocation, encodeLocation, locationOptions } from '../lib/actions';
 
 interface Picked {
@@ -12,6 +12,7 @@ interface Picked {
   material: string;
   color: string;
   hex: string;
+  hexes?: string[];
 }
 
 export function AddSpool(): JSX.Element {
@@ -66,7 +67,7 @@ export function AddSpool(): JSX.Element {
 
         <div class="screen__body">
           <div class="card row">
-            <Swatch hex={selection.hex} size={44} />
+            <Swatch hex={selection.hex} hexes={selection.hexes} size={44} />
             <div class="grow">
               <div style={{ fontSize: '14px', fontWeight: 600 }}>{selection.color}</div>
               <div class="muted" style={{ marginTop: '2px' }}>
@@ -186,6 +187,7 @@ export function AddSpool(): JSX.Element {
                 material: selection.material,
                 colorName: selection.color,
                 hex: selection.hex,
+                hexes: selection.hexes,
                 form,
                 mounted: form === 'refill' ? mounted : false,
                 netWeightG: weight,
@@ -272,9 +274,9 @@ export function AddSpool(): JSX.Element {
                   class="colortile"
                   data-on={picked?.color === c.color && picked?.hex === c.hex}
                   aria-label={c.color}
-                  onClick={() => setPicked({ brand: c.brand, material: c.material, color: c.color, hex: c.hex })}
+                  onClick={() => setPicked({ brand: c.brand, material: c.material, color: c.color, hex: c.hex, hexes: c.hexes })}
                 >
-                  <span class="colortile__swatch" style={{ background: c.hex }} />
+                  <span class="colortile__swatch" style={{ background: swatchBackground(c.hex, c.hexes) }} />
                   <span class="colortile__name">{c.color}</span>
                 </button>
               ))}

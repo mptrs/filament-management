@@ -21,6 +21,8 @@ export interface Spool {
   material: string;
   colorName: string;
   hex: string;
+  /** Co-extruded or gradient filament: every colour in it, in order. */
+  hexes?: string[];
   /** `refill` is spool-less filament; it needs an empty spool before it can be used. */
   form: 'spool' | 'refill';
   /** Only meaningful for refills: whether it is currently on a reusable spool. */
@@ -50,6 +52,7 @@ export interface CatalogEntry {
   material: string;
   color: string;
   hex: string;
+  hexes?: string[];
   source: string;
 }
 
