@@ -18,6 +18,26 @@
   ],
   "spools": [
     {
+      "brand": "Elegoo",
+      "material": "PLA+",
+      "colorName": "Black",
+      "hex": "#343132",
+      "form": "spool",
+      "mounted": false,
+      "netWeightG": 1000,
+      "remainingPct": 35,
+      "sealed": false,
+      "openedAt": "2026-09-21T18:13:14.187Z",
+      "dryState": "dry",
+      "location": {
+        "kind": "ams",
+        "printer": "maker-bee",
+        "slot": 1
+      },
+      "id": "174c1584-d03a-40f2-b5be-35a84e0735b8",
+      "addedAt": "2026-09-21T18:13:14.187Z"
+    },
+    {
       "brand": "Bambu Lab",
       "material": "PLA Basic",
       "colorName": "Black",
@@ -38,5 +58,5 @@
     }
   ],
   "emptySpools": 3,
-  "updatedAt": "2026-09-21T18:12:45.658Z"
+  "updatedAt": "2026-09-21T18:13:14.187Z"
 }
