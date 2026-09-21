@@ -16,26 +16,7 @@
       "slotsPerUnit": 4
     }
   ],
-  "spools": [
-    {
-      "brand": "Bambu Lab",
-      "material": "PLA Basic",
-      "colorName": "Bambu Green",
-      "hex": "#00AE42",
-      "form": "refill",
-      "mounted": true,
-      "netWeightG": 1000,
-      "remainingPct": 44,
-      "sealed": false,
-      "openedAt": "2026-09-20T19:45:48.959Z",
-      "dryState": "dry",
-      "location": {
-        "kind": "storage"
-      },
-      "id": "4f86bffc-69d1-43e2-a45c-b4a61c5f3b1a",
-      "addedAt": "2026-09-20T19:45:34.607Z"
-    }
-  ],
-  "emptySpools": 2,
-  "updatedAt": "2026-09-21T18:12:16.681Z"
+  "spools": [],
+  "emptySpools": 3,
+  "updatedAt": "2026-09-21T18:12:19.756Z"
 }
