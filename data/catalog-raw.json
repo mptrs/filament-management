@@ -861,6 +861,1581 @@
   "source": "bambu-official"
  },
  {
+  "brand": "Elegoo",
+  "material": "PETG HF",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG HF",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG HF",
+  "color": "Gray",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG HF",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG HF",
+  "color": "Blue",
+  "hex": "#2240af",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG HF",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG HF",
+  "color": "Yellow",
+  "hex": "#fbec07",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG HF",
+  "color": "Orange",
+  "hex": "#fd7c18",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG HF",
+  "color": "Brown",
+  "hex": "#9E6A4B",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG HF",
+  "color": "Beige",
+  "hex": "#f4e0b8",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG HF",
+  "color": "Space Gray",
+  "hex": "#7e7e7e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Matte Black",
+  "hex": "#090909",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Matte White",
+  "hex": "#f6f6f6",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Slate Grey",
+  "hex": "#969799",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Ruby Red",
+  "hex": "#bb2c2e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Navy Blue",
+  "hex": "#2d3f6f",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Teal Green",
+  "hex": "#74cdc7",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Sunshine Yellow",
+  "hex": "#f7d863",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Lavender Purple",
+  "hex": "#9d85d1",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Sakura Pink",
+  "hex": "#f9c2d5",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Ice Blue",
+  "hex": "#b3f3fd",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Beige",
+  "hex": "#f4e0b8",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Mint Green",
+  "hex": "#56CDB1",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 72D",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 72D",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 72D",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 72D",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 72D",
+  "color": "Yellow",
+  "hex": "#fbec07",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 72D",
+  "color": "Blue",
+  "hex": "#2240af",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 72D",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Translucent",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Translucent",
+  "color": "Yellow",
+  "hex": "#fbec07",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Translucent",
+  "color": "Light Blue",
+  "hex": "#339BF7",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Translucent",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Translucent",
+  "color": "Pink",
+  "hex": "#F9B0BD",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Yellow",
+  "hex": "#fbec07",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Orange",
+  "hex": "#fd7c18",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Pink",
+  "hex": "#F9B0BD",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Purple",
+  "hex": "#603BA0",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Sky Blue",
+  "hex": "#32d0ec",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Sea Green",
+  "hex": "#08b690",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Space Grey",
+  "hex": "#7e7e7e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Wood Color",
+  "hex": "#B19870",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Brown",
+  "hex": "#9E6A4B",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Beige",
+  "hex": "#f4e0b8",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Glow",
+  "color": "Glow Blue",
+  "hex": "#80CBF7",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Glow",
+  "color": "Glow Green",
+  "hex": "#ADE589",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Glow",
+  "color": "Glow Yellow",
+  "hex": "#F6F05C",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Glow",
+  "color": "Glow Orange",
+  "hex": "#FFA067",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Glow",
+  "color": "Glow Pink",
+  "hex": "#FF766D",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Wood",
+  "color": "Light Brown",
+  "hex": "#D7C4B4",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Wood",
+  "color": "Walnut Wood",
+  "hex": "#77504A",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Wood",
+  "color": "Rosewood",
+  "hex": "#523530",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Wood",
+  "color": "Tan Birch",
+  "hex": "#F2E9DD",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Wood",
+  "color": "Medium Brown",
+  "hex": "#885A40",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PC-FR",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PC-FR",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Translucent",
+  "color": "Translucent Blue",
+  "hex": "#4A92D3",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Translucent",
+  "color": "Translucent Green",
+  "hex": "#61DA66",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Translucent",
+  "color": "Translucent Orange",
+  "hex": "#DF6428",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Translucent",
+  "color": "Translucent Purple",
+  "hex": "#976BB9",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Translucent",
+  "color": "Translucent Grey",
+  "hex": "#7D7D7D",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Translucent",
+  "color": "Translucent Olive Green",
+  "hex": "#5C7443",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Translucent",
+  "color": "Translucent Amber",
+  "hex": "#B16D3A",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Translucent",
+  "color": "Translucent Pink",
+  "hex": "#D18F97",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid TPU 95A",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid TPU 95A",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid TPU 95A",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Yellow",
+  "hex": "#fbec07",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Cyan",
+  "hex": "#3AA2FF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Purple",
+  "hex": "#603BA0",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Cocoa Brown",
+  "hex": "#665345",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Hot Pink",
+  "hex": "#FF5D8E",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Sunflower Yellow",
+  "hex": "#FBB404",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Cobalt Blue",
+  "hex": "#1341D2",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Apple Green",
+  "hex": "#C2DE31",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Turquoise Green",
+  "hex": "#23C5C5",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Beige",
+  "hex": "#f4e0b8",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Pink",
+  "hex": "#F9B0BD",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Orange",
+  "hex": "#fd7c18",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PC",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PC",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG-GF",
+  "color": "Glass Fiber Black",
+  "hex": "#0C0908",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG-GF",
+  "color": "Glass Fiber Grey",
+  "hex": "#858590",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG-GF",
+  "color": "Glass Fiber White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PAHT-CF",
+  "color": "Carbon Fiber Black",
+  "hex": "#0C0908",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "Blue",
+  "hex": "#2240af",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "Orange",
+  "hex": "#fd7c18",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "Yellow",
+  "hex": "#fbec07",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "ABS Purple",
+  "hex": "#A506B4",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "ABS Pink",
+  "hex": "#F77D7F",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "ABS Cyan",
+  "hex": "#8DE2B8",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "ABS Olive Green",
+  "hex": "#589C00",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "ABS Sky Blue",
+  "hex": "#36A7F7",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "Orange Yellow",
+  "hex": "#E3BF1F",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ABS",
+  "color": "Navy Blue",
+  "hex": "#2d3f6f",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG-CF",
+  "color": "Carbon Fiber Black",
+  "hex": "#0C0908",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG-CF",
+  "color": "Carbon Fiber Grey",
+  "hex": "#45433B",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG-CF",
+  "color": "Carbon Fiber Red",
+  "hex": "#AE494B",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG-CF",
+  "color": "Carbon Fiber Blue",
+  "hex": "#2E437D",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG-CF",
+  "color": "Carbon Fiber Green",
+  "hex": "#0F775F",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG-CF",
+  "color": "Carbon Fiber Purple",
+  "hex": "#69419A",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Blue",
+  "hex": "#2240af",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Yellow",
+  "hex": "#fbec07",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Orange",
+  "hex": "#fd7c18",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Pink",
+  "hex": "#F9B0BD",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Purple",
+  "hex": "#603BA0",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Sky Blue",
+  "hex": "#32d0ec",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Sea Green",
+  "hex": "#08b690",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Space Grey",
+  "hex": "#7e7e7e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Wood color",
+  "hex": "#B19870",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Brown",
+  "hex": "#9E6A4B",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
+  "color": "Beige",
+  "hex": "#f4e0b8",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA-CF",
+  "color": "Carbon Fiber Black",
+  "hex": "#0C0908",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 95A",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 95A",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 95A",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 95A",
+  "color": "Blue",
+  "hex": "#2240af",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 95A",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 95A",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Pro",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Pro",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Pro",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Pro",
+  "color": "Silver",
+  "hex": "#9f9f9f",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Pro",
+  "color": "Blue",
+  "hex": "#2240af",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Pro",
+  "color": "Pink",
+  "hex": "#F9B0BD",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PETG Pro",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PETG",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PETG",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PETG",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PETG",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PETG",
+  "color": "Blue",
+  "hex": "#2240af",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PETG",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PETG",
+  "color": "Yellow",
+  "hex": "#fbec07",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PETG",
+  "color": "Orange",
+  "hex": "#fd7c18",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PETG",
+  "color": "Brown",
+  "hex": "#9E6A4B",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PETG",
+  "color": "Beige",
+  "hex": "#f4e0b8",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PETG",
+  "color": "Space Grey",
+  "hex": "#7e7e7e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Matte Black",
+  "hex": "#090909",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Matte White",
+  "hex": "#f6f6f6",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Slate Grey",
+  "hex": "#969799",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Ruby Red",
+  "hex": "#bb2c2e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Navy Blue",
+  "hex": "#2d3f6f",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Teal Green",
+  "hex": "#74cdc7",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Sunshine Yellow",
+  "hex": "#f7d863",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Lavender Purple",
+  "hex": "#9d85d1",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Sakura Pink",
+  "hex": "#f9c2d5",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Ice Blue",
+  "hex": "#b3f3fd",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Beige",
+  "hex": "#f4e0b8",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Mint Green",
+  "hex": "#56CDB1",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Matte",
+  "color": "Orange",
+  "hex": "#fd7c18",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ASA",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ASA",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ASA",
+  "color": "Blue",
+  "hex": "#2240af",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ASA",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ASA",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "ASA",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Pro",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Pro",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Pro",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Pro",
+  "color": "Burgundy Red",
+  "hex": "#9C2129",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Pro",
+  "color": "Blue",
+  "hex": "#2240af",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Pro",
+  "color": "Light Blue",
+  "hex": "#339BF7",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Pro",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Pro",
+  "color": "Yellow",
+  "hex": "#fbec07",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Pro",
+  "color": "Purple",
+  "hex": "#603BA0",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Pro",
+  "color": "Silver",
+  "hex": "#9f9f9f",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk Gold",
+  "hex": "#ffd10e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk Silver",
+  "hex": "#d5d7db",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk Coral Pink",
+  "hex": "#f4717d",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk Mint Green",
+  "hex": "#53d8d4",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk Copper",
+  "hex": "#965c39",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk White",
+  "hex": "#ffffff",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Blue",
+  "hex": "#2240af",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Yellow",
+  "hex": "#fbec07",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Orange",
+  "hex": "#fd7c18",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Silver",
+  "hex": "#9f9f9f",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Brown",
+  "hex": "#9E6A4B",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Beige",
+  "hex": "#f4e0b8",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Teal Green",
+  "hex": "#74cdc7",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Sakura Pink",
+  "hex": "#f9c2d5",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "Rapid PLA+",
+  "color": "Lavender Purple",
+  "hex": "#9d85d1",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Grey",
+  "hex": "#8f949b",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Green",
+  "hex": "#08e327",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Blue",
+  "hex": "#2240af",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Red",
+  "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Yellow",
+  "hex": "#fbec07",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Orange",
+  "hex": "#fd7c18",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Sky Blue",
+  "hex": "#32d0ec",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Space Grey",
+  "hex": "#7e7e7e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Purple",
+  "hex": "#603BA0",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Beige",
+  "hex": "#f4e0b8",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Sea Green",
+  "hex": "#08b690",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Pink",
+  "hex": "#F9B0BD",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Wood color",
+  "hex": "#B19870",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Brown",
+  "hex": "#9E6A4B",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Sakura Pink",
+  "hex": "#f9c2d5",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Teal Green",
+  "hex": "#74cdc7",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Lavender Purple",
+  "hex": "#9d85d1",
+  "source": "elegoo.com"
+ },
+ {
   "brand": "Bambu Lab",
   "material": "ABS",
   "color": "Azure",

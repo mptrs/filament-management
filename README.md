@@ -40,33 +40,43 @@ immediately instead of waiting for a rebuild.
 
 ## The colour catalogue
 
-`src/catalog.generated.json` holds 412 colours with real hex values, so a swatch
-in the app matches what you saw when you bought the filament — 310 Bambu Lab and
-102 Elegoo, across PLA, PLA Matte, Silk, Translucent, Galaxy, Sparkle, Glow,
-PETG, PETG Pro, Rapid PETG, ABS, ASA, TPU and the engineering grades.
+`src/catalog.generated.json` holds 539 colours with real hex values, so a swatch
+in the app matches what you saw when you bought the filament — 306 Bambu Lab
+across 36 ranges and 233 Elegoo across 25.
 
-Three sources, merged in this order of authority:
+Four sources, merged in this order of authority:
 
 | Source | What it gives |
 | --- | --- |
-| Bambu Lab's published hex tables (one PDF per product line) | The official values, the ones the store shows |
-| [SpoolmanDB](https://github.com/Donkie/SpoolmanDB) | The broadest coverage, and the only good Elegoo data — including co-extruded multi-colour |
-| [filamentcolors.xyz](https://filamentcolors.xyz) | Measured from printed swatches; fills remaining gaps |
+| Bambu Lab's published hex tables (one PDF per product line) | Bambu's official values, the ones their store shows |
+| elegoo.com | Elegoo's own ranges and swatch colours, straight from their shop |
+| [SpoolmanDB](https://github.com/Donkie/SpoolmanDB) | Broad community coverage, including co-extruded multi-colour |
+| [filamentcolors.xyz](https://filamentcolors.xyz) | Measured from printed swatches; fills what is left |
+
+Elegoo run a Shopify store, so the ranges and their colour options come from
+`products.json`, and the hex values from the theme's own swatch table, which is
+embedded in every product page and identical on all of them.
 
 Both community sources file everything under a bare family (`PLA`) and put the
 range in the colour name (`Matte Ivory White`, `RAPID PETG Blue`). The build
-splits those back apart, which is what stops Bambu's official *PLA Matte /
-Ivory White* and a community *PLA / Matte Ivory White* becoming two entries.
+splits those apart, then drops a range word the material already carries, so
+`PLA Silk / Silk Gold` becomes `PLA Silk / Gold`. Without that, the same
+filament would sit in the catalogue two or three times over.
 
 Co-extruded filament keeps every colour it has. A dual-colour silk draws as hard
 bands rather than a blend, because a blend would invent a colour that is not on
 the reel.
 
+**Known gap:** Elegoo's effect ranges — Galaxy, Sparkle, Marble, Metallic, CMYK —
+use swatch *images* on their own site rather than a flat colour, which is fair
+for speckled filament, so most of those have no hex anywhere. A handful arrive
+via the community sources; the rest need the colour picker.
+
 Regenerate it with:
 
 ```bash
 node scripts/build-catalog.mjs              # rebuild from data/catalog-raw.json
-node scripts/build-catalog.mjs --refresh    # also re-pull SpoolmanDB + filamentcolors
+node scripts/build-catalog.mjs --refresh    # re-pull elegoo.com, SpoolmanDB, filamentcolors
 python3 scripts/fetch-bambu-pdfs.py         # re-parse Bambu's PDFs (needs pypdf)
 ```
 
