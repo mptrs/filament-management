@@ -19,6 +19,24 @@
   "spools": [
     {
       "brand": "Elegoo",
+      "material": "PLA",
+      "colorName": "Wood Filled",
+      "hex": "#9D8058",
+      "form": "spool",
+      "mounted": false,
+      "netWeightG": 1000,
+      "remainingPct": 90,
+      "sealed": false,
+      "openedAt": "2026-09-22T13:30:38.961Z",
+      "dryState": "dry",
+      "location": {
+        "kind": "storage"
+      },
+      "id": "5d39c6ef-f5ea-4440-bd40-d3428d30f512",
+      "addedAt": "2026-09-22T13:30:38.962Z"
+    },
+    {
+      "brand": "Elegoo",
       "material": "ASA",
       "colorName": "White",
       "hex": "#FFFFFF",
@@ -237,5 +255,5 @@
     }
   ],
   "emptySpools": 5,
-  "updatedAt": "2026-09-22T13:29:56.833Z"
+  "updatedAt": "2026-09-22T13:30:38.962Z"
 }
