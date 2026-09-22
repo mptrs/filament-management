@@ -1,9 +1,9 @@
 import type { JSX } from 'preact';
 import { useMemo, useState } from 'preact/hooks';
-import { useApp } from '../lib/store';
+import { canEdit, useApp } from '../lib/store';
 import { href } from '../lib/router';
 import { locationText, needsSpool, remainingGrams, type Inventory as Inv, type Spool } from '../lib/types';
-import { Bar, Icon, Swatch, TabBar, pctColor } from '../components/ui';
+import { Bar, Icon, ReadOnlyNote, Swatch, TabBar, pctColor } from '../components/ui';
 
 type FilterId = 'all' | 'pla' | 'petg' | 'other' | 'sealed' | 'open' | 'low' | 'nospool';
 
@@ -19,7 +19,9 @@ const FILTERS: Array<{ id: FilterId; label: string; test: (s: Spool) => boolean 
 ];
 
 export function Inventory(): JSX.Element {
-  const { inv } = useApp();
+  const app = useApp();
+  const { inv } = app;
+  const writable = canEdit(app);
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<FilterId>('all');
 
@@ -82,13 +84,23 @@ export function Inventory(): JSX.Element {
       </header>
 
       <div class="screen__body">
+        {!writable && (
+          <div style={{ margin: '10px 0 4px' }}>
+            <ReadOnlyNote />
+          </div>
+        )}
+
         {visible.length === 0 && (
           <div class="empty">
             {inv.spools.length === 0 ? (
               <>
                 Nothing logged yet.
-                <br />
-                <a href={href('/add')}>Add your first spool</a>
+                {writable && (
+                  <>
+                    <br />
+                    <a href={href('/add')}>Add your first spool</a>
+                  </>
+                )}
               </>
             ) : (
               'No spools match that.'

@@ -15,6 +15,11 @@ with a third machine or the mini growing an AMS lite.
 - **Editing needs a token.** Paste a fine-grained personal access token once on the
   Sync screen. It is kept in that browser's `localStorage`, sent only to github.com,
   and never leaves your device otherwise — there is no server to send it to.
+- **Without one the app is a viewer,** not a broken editor. Every control that
+  changes something is gone: no Add tab, no eject on a loaded slot, no empty slot
+  to tap, no mount or remove. The spool screen still shows level, location,
+  moisture and notes, just as readings rather than fields. Screens that exist only
+  to change something say so and offer the Sync screen instead.
 - **Every save is a commit,** so the inventory has a full history you can roll back
   from GitHub's UI.
 - **It works offline.** The app is a PWA: the last synced copy opens without signal

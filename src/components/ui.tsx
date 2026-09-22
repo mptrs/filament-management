@@ -1,6 +1,7 @@
 import type { ComponentChildren, JSX } from 'preact';
 import { href, back as goBack } from '../lib/router';
 import { isPale } from '../lib/catalog';
+import { canEdit, useApp } from '../lib/store';
 
 /**
  * A dual-colour silk is two colours side by side on the spool, so it is drawn
@@ -227,11 +228,13 @@ export function Icon({ name, size = 18 }: { name: IconName; size?: number }): JS
 }
 
 export function TabBar({ active }: { active: 'printers' | 'inventory' | 'refills' | 'add' }): JSX.Element {
+  const writable = canEdit(useApp());
   const tabs: Array<{ id: typeof active; to: string; label: string; icon: IconName }> = [
     { id: 'printers', to: '/', label: 'Printers', icon: 'printer' },
     { id: 'inventory', to: '/inventory', label: 'Inventory', icon: 'spool' },
     { id: 'refills', to: '/refills', label: 'Refills', icon: 'refill' },
-    { id: 'add', to: '/add', label: 'Add', icon: 'plus' },
+    // Without a token there is nothing to add to.
+    ...(writable ? [{ id: 'add' as const, to: '/add', label: 'Add', icon: 'plus' as const }] : []),
   ];
   return (
     <nav class="tabbar">
@@ -242,5 +245,38 @@ export function TabBar({ active }: { active: 'printers' | 'inventory' | 'refills
         </a>
       ))}
     </nav>
+  );
+}
+
+/**
+ * Says why the controls are missing, rather than leaving a visitor to wonder.
+ * Shown once per screen, never on the Sync screen itself.
+ */
+export function ReadOnlyNote(): JSX.Element {
+  return (
+    <Note icon="lock">
+      Read-only — you are seeing this inventory, not editing it.{' '}
+      <a href={href('/connect')}>Add a token</a> to make changes.
+    </Note>
+  );
+}
+
+/** Stands in for a screen that only exists to change something. */
+export function NeedsAccess({ title, what }: { title: string; what: string }): JSX.Element {
+  return (
+    <div class="screen">
+      <header class="topbar">
+        <BackButton to="/" label="Back to printers" />
+        <div class="topbar__title">{title}</div>
+      </header>
+      <div class="screen__body">
+        <div class="empty" style={{ paddingBottom: '16px' }}>
+          {what} needs editing access.
+        </div>
+        <a class="btn btn--block" href={href('/connect')} style={{ display: 'block', textAlign: 'center' }}>
+          Add a token
+        </a>
+      </div>
+    </div>
   );
 }

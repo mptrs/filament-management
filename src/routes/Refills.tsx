@@ -1,11 +1,13 @@
 import type { JSX } from 'preact';
-import { useApp } from '../lib/store';
+import { canEdit, useApp } from '../lib/store';
 import { href } from '../lib/router';
-import { Icon, Note, Swatch, TabBar } from '../components/ui';
+import { Icon, Note, ReadOnlyNote, Swatch, TabBar } from '../components/ui';
 import { mountRefill, setEmptySpools, unmountRefill } from '../lib/actions';
 
 export function Refills(): JSX.Element {
-  const { inv } = useApp();
+  const app = useApp();
+  const { inv } = app;
+  const writable = canEdit(app);
   const refills = inv.spools.filter((s) => s.form === 'refill');
   const waiting = refills.filter((s) => !s.mounted);
   const mounted = refills.filter((s) => s.mounted);
@@ -19,6 +21,12 @@ export function Refills(): JSX.Element {
       </header>
 
       <div class="screen__body">
+        {!writable && (
+          <div style={{ marginBottom: '12px' }}>
+            <ReadOnlyNote />
+          </div>
+        )}
+
         <div class="card row" style={{ gap: '14px' }}>
           <div class="grow">
             <div style={{ fontFamily: 'var(--display)', fontSize: '40px', fontWeight: 700, lineHeight: 1 }}>
@@ -27,15 +35,17 @@ export function Refills(): JSX.Element {
             <div style={{ fontSize: '12.5px', color: 'var(--dim)', marginTop: '5px' }}>empty spools free</div>
             <div class="muted" style={{ marginTop: '2px' }}>Reusable spools with nothing on them</div>
           </div>
-          <div class="stepper">
-            <button type="button" aria-label="One fewer empty spool" onClick={() => setEmptySpools(inv.emptySpools - 1)}>
-              <Icon name="minus" size={16} />
-            </button>
-            <span>{inv.emptySpools}</span>
-            <button type="button" aria-label="One more empty spool" onClick={() => setEmptySpools(inv.emptySpools + 1)}>
-              <Icon name="plus" size={16} />
-            </button>
-          </div>
+          {writable && (
+            <div class="stepper">
+              <button type="button" aria-label="One fewer empty spool" onClick={() => setEmptySpools(inv.emptySpools - 1)}>
+                <Icon name="minus" size={16} />
+              </button>
+              <span>{inv.emptySpools}</span>
+              <button type="button" aria-label="One more empty spool" onClick={() => setEmptySpools(inv.emptySpools + 1)}>
+                <Icon name="plus" size={16} />
+              </button>
+            </div>
+          )}
         </div>
 
         {short && (
@@ -50,8 +60,12 @@ export function Refills(): JSX.Element {
         {refills.length === 0 && (
           <div class="empty">
             No refills logged.
-            <br />
-            <a href={href('/add')}>Add one</a> and mark it as a refill.
+            {writable && (
+              <>
+                <br />
+                <a href={href('/add')}>Add one</a> and mark it as a refill.
+              </>
+            )}
           </div>
         )}
 
@@ -71,15 +85,19 @@ export function Refills(): JSX.Element {
                     {s.brand} · {s.material} · {s.netWeightG} g refill
                   </span>
                 </a>
-                <button
-                  type="button"
-                  class="chip"
-                  data-on={inv.emptySpools > 0}
-                  disabled={inv.emptySpools === 0}
-                  onClick={() => mountRefill(s.id)}
-                >
-                  Mount
-                </button>
+                {writable ? (
+                  <button
+                    type="button"
+                    class="chip"
+                    data-on={inv.emptySpools > 0}
+                    disabled={inv.emptySpools === 0}
+                    onClick={() => mountRefill(s.id)}
+                  >
+                    Mount
+                  </button>
+                ) : (
+                  <span class="pill" style={{ color: 'var(--accent)' }}>Needs spool</span>
+                )}
               </div>
             ))}
           </>
@@ -101,17 +119,21 @@ export function Refills(): JSX.Element {
                     {s.brand} · {s.material} · {s.remainingPct}% left
                   </span>
                 </a>
-                <button type="button" class="chip" onClick={() => unmountRefill(s.id)}>
-                  Free up
-                </button>
+                {writable && (
+                  <button type="button" class="chip" onClick={() => unmountRefill(s.id)}>
+                    Free up
+                  </button>
+                )}
               </div>
             ))}
           </>
         )}
 
-        <div style={{ marginTop: '18px' }}>
-          <Note>Freeing up a spool returns it to the pool and sends that filament back to storage.</Note>
-        </div>
+        {writable && (
+          <div style={{ marginTop: '18px' }}>
+            <Note>Freeing up a spool returns it to the pool and sends that filament back to storage.</Note>
+          </div>
+        )}
       </div>
 
       <TabBar active="refills" />

@@ -1,11 +1,13 @@
 import type { JSX } from 'preact';
-import { useApp } from '../lib/store';
+import { canEdit, useApp } from '../lib/store';
 import { href } from '../lib/router';
 import { totalSlots } from '../lib/types';
 import { BackButton, Icon, Note, swatchBackground } from '../components/ui';
 
 export function PrinterList(): JSX.Element {
-  const { inv } = useApp();
+  const app = useApp();
+  const { inv } = app;
+  const writable = canEdit(app);
   const loadedCount = inv.spools.filter((s) => s.location.kind !== 'storage').length;
   const capacity = inv.printers.reduce((n, p) => n + totalSlots(p), 0);
 
@@ -13,7 +15,7 @@ export function PrinterList(): JSX.Element {
     <div class="screen">
       <header class="topbar">
         <BackButton to="/" label="Back to printers" />
-        <div class="topbar__title">Manage printers</div>
+        <div class="topbar__title">{writable ? 'Manage printers' : 'Printers'}</div>
       </header>
 
       <div class="screen__body">
@@ -52,13 +54,15 @@ export function PrinterList(): JSX.Element {
           );
         })}
 
-        <a
-          href={href('/printer/new')}
-          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '9px', border: '1px dashed #343941', borderRadius: '16px', padding: '16px', marginTop: '4px' }}
-        >
-          <Icon name="plus" />
-          <span style={{ fontSize: '13.5px', fontWeight: 600 }}>Add a printer</span>
-        </a>
+        {writable && (
+          <a
+            href={href('/printer/new')}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '9px', border: '1px dashed #343941', borderRadius: '16px', padding: '16px', marginTop: '4px' }}
+          >
+            <Icon name="plus" />
+            <span style={{ fontSize: '13.5px', fontWeight: 600 }}>Add a printer</span>
+          </a>
+        )}
 
         <div class="sectionhead">
           <span class="label grow">Slots in use</span>
@@ -82,12 +86,14 @@ export function PrinterList(): JSX.Element {
           </div>
         </div>
 
-        <div style={{ marginTop: '16px' }}>
-          <Note>
-            Removing a printer never deletes filament. Anything loaded on it moves back to storage, so you keep the spool
-            and its history.
-          </Note>
-        </div>
+        {writable && (
+          <div style={{ marginTop: '16px' }}>
+            <Note>
+              Removing a printer never deletes filament. Anything loaded on it moves back to storage, so you keep the
+              spool and its history.
+            </Note>
+          </div>
+        )}
       </div>
     </div>
   );

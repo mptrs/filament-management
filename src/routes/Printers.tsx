@@ -1,15 +1,17 @@
 import type { JSX } from 'preact';
-import { useApp } from '../lib/store';
+import { canEdit, useApp } from '../lib/store';
 import { href } from '../lib/router';
 import { totalSlots, type Printer, type Spool } from '../lib/types';
-import { Bar, Icon, Note, Swatch, TabBar, pctColor } from '../components/ui';
+import { Bar, Icon, Note, ReadOnlyNote, Swatch, TabBar, pctColor } from '../components/ui';
 import { unloadSpool } from '../lib/actions';
 import { relativeTime } from '../lib/util';
 
 const LOW_PCT = 15;
 
 export function Printers(): JSX.Element {
-  const { inv, pending, syncing, online, lastSync } = useApp();
+  const app = useApp();
+  const { inv, pending, syncing, online, lastSync } = app;
+  const writable = canEdit(app);
 
   const loaded = inv.spools.filter((s) => s.location.kind !== 'storage');
   const low = loaded.filter((s) => s.remainingPct <= LOW_PCT);
@@ -39,6 +41,8 @@ export function Printers(): JSX.Element {
       </header>
 
       <div class="screen__body stack">
+        {!writable && <ReadOnlyNote />}
+
         {low.length > 0 && (
           <Note tone="bad" icon="warn">
             <strong style={{ display: 'block', fontSize: '13px' }}>
@@ -54,16 +58,20 @@ export function Printers(): JSX.Element {
           <div class="card">
             <div style={{ fontSize: '14px', fontWeight: 600 }}>No printers yet</div>
             <p class="muted" style={{ margin: '6px 0 12px', lineHeight: 1.45 }}>
-              Add your machines first — then every spool can say which one it is loaded on.
+              {writable
+                ? 'Add your machines first — then every spool can say which one it is loaded on.'
+                : 'Nothing has been set up in this inventory yet.'}
             </p>
-            <a class="btn btn--block" href={href('/printer/new')} style={{ display: 'block', textAlign: 'center' }}>
-              Add a printer
-            </a>
+            {writable && (
+              <a class="btn btn--block" href={href('/printer/new')} style={{ display: 'block', textAlign: 'center' }}>
+                Add a printer
+              </a>
+            )}
           </div>
         )}
 
         {inv.printers.map((p) => (
-          <PrinterCard key={p.id} printer={p} spools={inv.spools} />
+          <PrinterCard key={p.id} printer={p} spools={inv.spools} writable={writable} />
         ))}
 
         <a class="card stats" href={href('/inventory')}>
@@ -88,7 +96,7 @@ export function Printers(): JSX.Element {
         <a class="card card--quiet rowlink" href={href('/printers')}>
           <Icon name="printer" size={17} />
           <span class="grow" style={{ fontSize: '13px', color: 'var(--text-2)' }}>
-            Manage printers
+            {writable ? 'Manage printers' : 'Printers'}
           </span>
           <span class="muted">{inv.printers.length}</span>
           <Icon name="chevronRight" size={16} />
@@ -100,7 +108,15 @@ export function Printers(): JSX.Element {
   );
 }
 
-function PrinterCard({ printer, spools }: { printer: Printer; spools: Spool[] }): JSX.Element {
+function PrinterCard({
+  printer,
+  spools,
+  writable,
+}: {
+  printer: Printer;
+  spools: Spool[];
+  writable: boolean;
+}): JSX.Element {
   const count = totalSlots(printer);
   const slots = Array.from({ length: count }, (_, i) => {
     const slot = i + 1;
@@ -128,19 +144,29 @@ function PrinterCard({ printer, spools }: { printer: Printer; spools: Spool[] })
 
       <div class="grid-slots" style={{ gridTemplateColumns: `repeat(${count > 1 ? 2 : 1}, minmax(0, 1fr))` }}>
         {slots.map((spool, i) => (
-          <SlotTile key={i} printer={printer} slot={i + 1} spool={spool} />
+          <SlotTile key={i} printer={printer} slot={i + 1} spool={spool} writable={writable} />
         ))}
       </div>
     </section>
   );
 }
 
-function SlotTile({ printer, slot, spool }: { printer: Printer; slot: number; spool?: Spool }): JSX.Element {
+function SlotTile({
+  printer,
+  slot,
+  spool,
+  writable,
+}: {
+  printer: Printer;
+  slot: number;
+  spool?: Spool;
+  writable: boolean;
+}): JSX.Element {
   const tag = printer.amsUnits > 0 ? `A${slot}` : 'Direct';
 
   if (!spool) {
-    return (
-      <a class="slot slot--empty" href={href(`/load/${printer.id}/${slot}`)}>
+    const body = (
+      <>
         <span
           class="swatch"
           style={{ width: '28px', height: '28px', borderRadius: '8px', background: 'transparent', boxShadow: 'inset 0 0 0 1px var(--line)' }}
@@ -148,11 +174,19 @@ function SlotTile({ printer, slot, spool }: { printer: Printer; slot: number; sp
         <div class="slot__name" style={{ color: 'var(--faint)' }}>
           Empty
         </div>
-        <div class="slot__sub">Tap to load</div>
+        {writable && <div class="slot__sub">Tap to load</div>}
         <div class="row" style={{ gap: '7px', marginTop: '9px' }}>
           <span class="mono slot__tag">{tag}</span>
         </div>
+      </>
+    );
+    // Nothing to load it with, so the tile is just a statement of fact.
+    return writable ? (
+      <a class="slot slot--empty" href={href(`/load/${printer.id}/${slot}`)}>
+        {body}
       </a>
+    ) : (
+      <div class="slot slot--empty">{body}</div>
     );
   }
 
@@ -174,15 +208,17 @@ function SlotTile({ printer, slot, spool }: { printer: Printer; slot: number; sp
           </span>
         </div>
       </a>
-      <button
-        type="button"
-        class="slot__eject"
-        aria-label={`Unload ${spool.colorName} from ${printer.name} ${tag}`}
-        title="Unload to storage"
-        onClick={() => unloadSpool(spool.id)}
-      >
-        <Icon name="eject" size={15} />
-      </button>
+      {writable && (
+        <button
+          type="button"
+          class="slot__eject"
+          aria-label={`Unload ${spool.colorName} from ${printer.name} ${tag}`}
+          title="Unload to storage"
+          onClick={() => unloadSpool(spool.id)}
+        >
+          <Icon name="eject" size={15} />
+        </button>
+      )}
     </div>
   );
 }
