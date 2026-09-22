@@ -19,6 +19,24 @@
   "spools": [
     {
       "brand": "Elegoo",
+      "material": "ASA",
+      "colorName": "White",
+      "hex": "#FFFFFF",
+      "form": "spool",
+      "mounted": false,
+      "netWeightG": 1000,
+      "remainingPct": 90,
+      "sealed": false,
+      "openedAt": "2026-09-22T13:29:56.824Z",
+      "dryState": "dry",
+      "location": {
+        "kind": "storage"
+      },
+      "id": "1b3935f7-ec84-40e6-b35e-549d1072c1f8",
+      "addedAt": "2026-09-22T13:29:56.831Z"
+    },
+    {
+      "brand": "Elegoo",
       "material": "PLA Basic",
       "colorName": "Cocoa Brown",
       "hex": "#665345",
@@ -219,5 +237,5 @@
     }
   ],
   "emptySpools": 5,
-  "updatedAt": "2026-09-22T13:26:07.331Z"
+  "updatedAt": "2026-09-22T13:29:56.833Z"
 }
