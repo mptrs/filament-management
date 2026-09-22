@@ -12,8 +12,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
       manifest: {
-        name: 'Filament Manager',
-        short_name: 'Filament',
+        name: 'Spoolhive',
+        short_name: 'Spoolhive',
         description: 'What filament you own, what is loaded, and what is still sealed.',
         theme_color: '#101114',
         background_color: '#101114',

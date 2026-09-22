@@ -23,7 +23,7 @@ export function Printers(): JSX.Element {
     <div class="screen screen--tabbed">
       <header class="topbar">
         <div class="grow">
-          <h1>Workshop</h1>
+          <h1>Spoolhive</h1>
           <div class="topbar__sub">
             {inv.spools.length} {inv.spools.length === 1 ? 'spool' : 'spools'} · {inv.printers.length}{' '}
             {inv.printers.length === 1 ? 'printer' : 'printers'}

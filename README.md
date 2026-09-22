@@ -1,4 +1,4 @@
-# Filament Manager
+# Spoolhive
 
 What filament you own, what is loaded in which printer, and what is still sealed —
 a phone-first app that runs on GitHub Pages with no server and no accounts.
@@ -26,7 +26,7 @@ with a third machine or the mini growing an AMS lite.
    paid plan).
 2. In **Settings → Pages**, set *Source* to **GitHub Actions**.
 3. Push to `main`. The workflow in `.github/workflows/deploy.yml` builds and deploys.
-4. Open `https://<you>.github.io/<repo>/`. The app works out which repo it lives in
+4. Open `https://<you>.github.io/spoolhive/`. The app works out which repo it lives in
    from that URL, so there is nothing to configure.
 5. Create a token at **Settings → Developer settings → Personal access tokens →
    Fine-grained tokens**:

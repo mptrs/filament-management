@@ -2,7 +2,7 @@ import type { JSX } from 'preact';
 import { useMemo, useState } from 'preact/hooks';
 import { useApp } from '../lib/store';
 import { href } from '../lib/router';
-import { locationText, needsSpool, type Inventory as Inv, type Spool } from '../lib/types';
+import { locationText, needsSpool, remainingGrams, type Inventory as Inv, type Spool } from '../lib/types';
 import { Bar, Icon, Swatch, TabBar, pctColor } from '../components/ui';
 
 type FilterId = 'all' | 'pla' | 'petg' | 'other' | 'sealed' | 'open' | 'low' | 'nospool';
@@ -41,6 +41,9 @@ export function Inventory(): JSX.Element {
 
   const loaded = visible.filter((s) => s.location.kind !== 'storage');
   const stored = visible.filter((s) => s.location.kind === 'storage');
+
+  const [open, setOpen] = useState<Record<string, boolean>>({});
+  const toggle = (key: string): void => setOpen((prev) => ({ ...prev, [key]: !prev[key] }));
 
   return (
     <div class="screen screen--tabbed">
@@ -94,30 +97,115 @@ export function Inventory(): JSX.Element {
         )}
 
         {loaded.length > 0 && (
-          <>
-            <div class="sectionhead">
-              <span class="label grow">Loaded in a printer · {loaded.length}</span>
-            </div>
-            {loaded.map((s) => (
-              <SpoolRow key={s.id} spool={s} inv={inv} />
-            ))}
-          </>
+          <Section title="Loaded in a printer" spools={loaded} inv={inv} open={open} toggle={toggle} />
         )}
 
-        {stored.length > 0 && (
-          <>
-            <div class="sectionhead">
-              <span class="label grow">Storage · {stored.length}</span>
-            </div>
-            {stored.map((s) => (
-              <SpoolRow key={s.id} spool={s} inv={inv} />
-            ))}
-          </>
-        )}
+        {stored.length > 0 && <Section title="Storage" spools={stored} inv={inv} open={open} toggle={toggle} />}
       </div>
 
       <TabBar active="inventory" />
     </div>
+  );
+}
+
+/** Same brand, material and colour is the same filament, however many reels of it you have. */
+function groupKey(spool: Spool): string {
+  return `${spool.brand}|${spool.material}|${spool.colorName}|${spool.hex}`.toLowerCase();
+}
+
+function Section({
+  title,
+  spools,
+  inv,
+  open,
+  toggle,
+}: {
+  title: string;
+  spools: Spool[];
+  inv: Inv;
+  open: Record<string, boolean>;
+  toggle: (key: string) => void;
+}): JSX.Element {
+  const groups = new Map<string, Spool[]>();
+  for (const spool of spools) {
+    const key = groupKey(spool);
+    groups.set(key, [...(groups.get(key) ?? []), spool]);
+  }
+
+  return (
+    <>
+      <div class="sectionhead">
+        <span class="label grow">
+          {title} · {spools.length}
+        </span>
+      </div>
+      {[...groups.entries()].map(([key, members]) =>
+        members.length === 1 ? (
+          <SpoolRow key={key} spool={members[0]} inv={inv} />
+        ) : (
+          <GroupRow
+            key={key}
+            members={members}
+            inv={inv}
+            expanded={Boolean(open[key])}
+            onToggle={() => toggle(key)}
+          />
+        ),
+      )}
+    </>
+  );
+}
+
+function GroupRow({
+  members,
+  inv,
+  expanded,
+  onToggle,
+}: {
+  members: Spool[];
+  inv: Inv;
+  expanded: boolean;
+  onToggle: () => void;
+}): JSX.Element {
+  const first = members[0];
+  const grams = members.reduce((total, s) => total + remainingGrams(s), 0);
+  const sealed = members.filter((s) => s.sealed).length;
+  const amount = grams >= 1000 ? `${(grams / 1000).toFixed(1)} kg` : `${grams} g`;
+
+  return (
+    <>
+      <button type="button" class="listrow" aria-expanded={expanded} onClick={onToggle}>
+        <Swatch hex={first.hex} hexes={first.hexes} />
+        <span class="grow">
+          <span class="listrow__name truncate" style={{ display: 'block' }}>
+            {first.colorName}
+          </span>
+          <span class="listrow__sub truncate" style={{ display: 'block' }}>
+            {first.brand} · {first.material}
+            {sealed > 0 && ` · ${sealed} sealed`}
+          </span>
+        </span>
+        <span style={{ flexShrink: 0, textAlign: 'right' }}>
+          <span class="pill" style={{ display: 'block', fontWeight: 600, color: 'var(--text)' }}>
+            {members.length} reels
+          </span>
+          <span class="mono" style={{ display: 'block', fontSize: '11.5px', color: 'var(--faint)', marginTop: '5px' }}>
+            ≈ {amount}
+          </span>
+        </span>
+        <span style={{ flexShrink: 0, color: 'var(--ghost)', transform: expanded ? 'rotate(90deg)' : 'none' }}>
+          <Icon name="chevronRight" size={16} />
+        </span>
+      </button>
+
+      {expanded && (
+        <div style={{ paddingLeft: '24px', borderLeft: '1px solid var(--line-soft)', marginLeft: '18px' }}>
+          {members.map((spool) => (
+            <SpoolRow key={spool.id} spool={spool} inv={inv} />
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 
