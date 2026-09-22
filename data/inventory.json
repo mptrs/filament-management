@@ -20,6 +20,24 @@
     {
       "brand": "Elegoo",
       "material": "PLA+",
+      "colorName": "Space Grey",
+      "hex": "#7E7E7E",
+      "form": "spool",
+      "mounted": false,
+      "netWeightG": 1000,
+      "remainingPct": 95,
+      "sealed": false,
+      "openedAt": "2026-09-22T13:35:45.371Z",
+      "dryState": "dry",
+      "location": {
+        "kind": "storage"
+      },
+      "id": "8157f031-839e-4050-a45b-09a1b03701a8",
+      "addedAt": "2026-09-22T13:35:45.372Z"
+    },
+    {
+      "brand": "Elegoo",
+      "material": "PLA+",
       "colorName": "Beige",
       "hex": "#F4E0B8",
       "form": "spool",
@@ -347,5 +365,5 @@
     }
   ],
   "emptySpools": 5,
-  "updatedAt": "2026-09-22T13:35:09.652Z"
+  "updatedAt": "2026-09-22T13:35:45.372Z"
 }
