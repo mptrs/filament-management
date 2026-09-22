@@ -1,7 +1,7 @@
 import type { JSX } from 'preact';
 import { canEdit, useApp } from '../lib/store';
 import { href } from '../lib/router';
-import { Icon, Note, ReadOnlyNote, Swatch, TabBar } from '../components/ui';
+import { Icon, Note, Swatch, TabBar } from '../components/ui';
 import { mountRefill, setEmptySpools, unmountRefill } from '../lib/actions';
 
 export function Refills(): JSX.Element {
@@ -21,12 +21,6 @@ export function Refills(): JSX.Element {
       </header>
 
       <div class="screen__body">
-        {!writable && (
-          <div style={{ marginBottom: '12px' }}>
-            <ReadOnlyNote />
-          </div>
-        )}
-
         <div class="card row" style={{ gap: '14px' }}>
           <div class="grow">
             <div style={{ fontFamily: 'var(--display)', fontSize: '40px', fontWeight: 700, lineHeight: 1 }}>

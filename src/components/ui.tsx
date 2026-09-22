@@ -248,35 +248,3 @@ export function TabBar({ active }: { active: 'printers' | 'inventory' | 'refills
   );
 }
 
-/**
- * Says why the controls are missing, rather than leaving a visitor to wonder.
- * Shown once per screen, never on the Sync screen itself.
- */
-export function ReadOnlyNote(): JSX.Element {
-  return (
-    <Note icon="lock">
-      Read-only — you are seeing this inventory, not editing it.{' '}
-      <a href={href('/connect')}>Add a token</a> to make changes.
-    </Note>
-  );
-}
-
-/** Stands in for a screen that only exists to change something. */
-export function NeedsAccess({ title, what }: { title: string; what: string }): JSX.Element {
-  return (
-    <div class="screen">
-      <header class="topbar">
-        <BackButton to="/" label="Back to printers" />
-        <div class="topbar__title">{title}</div>
-      </header>
-      <div class="screen__body">
-        <div class="empty" style={{ paddingBottom: '16px' }}>
-          {what} needs editing access.
-        </div>
-        <a class="btn btn--block" href={href('/connect')} style={{ display: 'block', textAlign: 'center' }}>
-          Add a token
-        </a>
-      </div>
-    </div>
-  );
-}

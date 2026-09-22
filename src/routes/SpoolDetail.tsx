@@ -2,7 +2,7 @@ import type { JSX } from 'preact';
 import { canEdit, useApp } from '../lib/store';
 import { back, href } from '../lib/router';
 import { isLoaded, locationText, remainingGrams, type DryState } from '../lib/types';
-import { Bar, BackButton, Icon, Note, ReadOnlyNote, pctColor, swatchBackground } from '../components/ui';
+import { Bar, BackButton, Icon, Note, pctColor, swatchBackground } from '../components/ui';
 import {
   decodeLocation,
   deleteSpool,
@@ -77,12 +77,6 @@ export function SpoolDetail({ id }: { id: string }): JSX.Element {
       </header>
 
       <div class="screen__body">
-        {!writable && (
-          <div style={{ marginBottom: '14px' }}>
-            <ReadOnlyNote />
-          </div>
-        )}
-
         <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line)' }}>
           {writable ? (
             <a

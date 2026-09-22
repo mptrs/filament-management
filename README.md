@@ -18,8 +18,10 @@ with a third machine or the mini growing an AMS lite.
 - **Without one the app is a viewer,** not a broken editor. Every control that
   changes something is gone: no Add tab, no eject on a loaded slot, no empty slot
   to tap, no mount or remove. The spool screen still shows level, location,
-  moisture and notes, just as readings rather than fields. Screens that exist only
-  to change something say so and offer the Sync screen instead.
+  moisture and notes, just as readings rather than fields. Routes that exist only
+  to change something (`/add`, `/printer/:id`, `/load/…`, `/recolor/:id`) redirect
+  home, so a typed URL or an old link cannot land on a dead screen. There is no
+  banner about any of this — a viewer is not missing anything they came for.
 - **Every save is a commit,** so the inventory has a full history you can roll back
   from GitHub's UI.
 - **It works offline.** The app is a PWA: the last synced copy opens without signal

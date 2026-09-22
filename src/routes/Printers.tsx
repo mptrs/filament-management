@@ -2,7 +2,7 @@ import type { JSX } from 'preact';
 import { canEdit, useApp } from '../lib/store';
 import { href } from '../lib/router';
 import { totalSlots, type Printer, type Spool } from '../lib/types';
-import { Bar, Icon, Note, ReadOnlyNote, Swatch, TabBar, pctColor } from '../components/ui';
+import { Bar, Icon, Note, Swatch, TabBar, pctColor } from '../components/ui';
 import { unloadSpool } from '../lib/actions';
 import { relativeTime } from '../lib/util';
 
@@ -41,8 +41,6 @@ export function Printers(): JSX.Element {
       </header>
 
       <div class="screen__body stack">
-        {!writable && <ReadOnlyNote />}
-
         {low.length > 0 && (
           <Note tone="bad" icon="warn">
             <strong style={{ display: 'block', fontSize: '13px' }}>

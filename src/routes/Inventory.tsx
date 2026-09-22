@@ -3,7 +3,7 @@ import { useMemo, useState } from 'preact/hooks';
 import { canEdit, useApp } from '../lib/store';
 import { href } from '../lib/router';
 import { locationText, needsSpool, remainingGrams, type Inventory as Inv, type Spool } from '../lib/types';
-import { Bar, Icon, ReadOnlyNote, Swatch, TabBar, pctColor } from '../components/ui';
+import { Bar, Icon, Swatch, TabBar, pctColor } from '../components/ui';
 
 type FilterId = 'all' | 'pla' | 'petg' | 'other' | 'sealed' | 'open' | 'low' | 'nospool';
 
@@ -84,12 +84,6 @@ export function Inventory(): JSX.Element {
       </header>
 
       <div class="screen__body">
-        {!writable && (
-          <div style={{ margin: '10px 0 4px' }}>
-            <ReadOnlyNote />
-          </div>
-        )}
-
         {visible.length === 0 && (
           <div class="empty">
             {inv.spools.length === 0 ? (
