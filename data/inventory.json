@@ -20,6 +20,24 @@
     {
       "brand": "Elegoo",
       "material": "PLA Sparkle",
+      "colorName": "Green",
+      "hex": "#0B3426",
+      "form": "spool",
+      "mounted": false,
+      "netWeightG": 1000,
+      "remainingPct": 45,
+      "sealed": false,
+      "openedAt": "2026-09-22T13:36:41.737Z",
+      "dryState": "dry",
+      "location": {
+        "kind": "storage"
+      },
+      "id": "7674a6bc-676a-4643-a752-1b770dcc2c5c",
+      "addedAt": "2026-09-22T13:36:41.738Z"
+    },
+    {
+      "brand": "Elegoo",
+      "material": "PLA Sparkle",
       "colorName": "Gold",
       "hex": "#F2C111",
       "form": "spool",
@@ -383,5 +401,5 @@
     }
   ],
   "emptySpools": 5,
-  "updatedAt": "2026-09-22T13:36:14.530Z"
+  "updatedAt": "2026-09-22T13:36:41.738Z"
 }
