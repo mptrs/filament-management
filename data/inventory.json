@@ -25,6 +25,25 @@
       "form": "spool",
       "mounted": false,
       "netWeightG": 1000,
+      "remainingPct": 80,
+      "sealed": false,
+      "openedAt": "2026-09-22T05:10:15.260Z",
+      "dryState": "dry",
+      "location": {
+        "kind": "direct",
+        "printer": "maker-ant"
+      },
+      "id": "6201deaa-cb32-4b0a-b02d-a6039cc01f61",
+      "addedAt": "2026-09-22T05:10:15.260Z"
+    },
+    {
+      "brand": "Elegoo",
+      "material": "PLA+",
+      "colorName": "Black",
+      "hex": "#000000",
+      "form": "spool",
+      "mounted": false,
+      "netWeightG": 1000,
       "remainingPct": 30,
       "sealed": false,
       "openedAt": "2026-09-21T18:13:14.187Z",
@@ -39,5 +58,5 @@
     }
   ],
   "emptySpools": 5,
-  "updatedAt": "2026-09-22T05:09:45.054Z"
+  "updatedAt": "2026-09-22T05:10:15.260Z"
 }
