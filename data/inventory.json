@@ -52,7 +52,8 @@
         "kind": "storage"
       },
       "id": "1b3935f7-ec84-40e6-b35e-549d1072c1f8",
-      "addedAt": "2026-09-22T13:29:56.831Z"
+      "addedAt": "2026-09-22T13:29:56.831Z",
+      "notes": "Sealed bag"
     },
     {
       "brand": "Elegoo",
@@ -256,5 +257,5 @@
     }
   ],
   "emptySpools": 5,
-  "updatedAt": "2026-09-22T13:30:55.022Z"
+  "updatedAt": "2026-09-22T13:31:05.969Z"
 }
