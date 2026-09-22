@@ -33,7 +33,8 @@
         "kind": "storage"
       },
       "id": "a0c63fef-17c4-4d9e-bd5c-b712552ff79d",
-      "addedAt": "2026-09-22T13:22:07.866Z"
+      "addedAt": "2026-09-22T13:22:07.866Z",
+      "notes": "Dark blue"
     },
     {
       "brand": "Elegoo",
@@ -165,5 +166,5 @@
     }
   ],
   "emptySpools": 5,
-  "updatedAt": "2026-09-22T13:22:07.866Z"
+  "updatedAt": "2026-09-22T13:22:17.104Z"
 }
