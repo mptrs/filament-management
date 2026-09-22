@@ -19,6 +19,23 @@
   "spools": [
     {
       "brand": "Elegoo",
+      "material": "PLA+",
+      "colorName": "Black",
+      "hex": "#000000",
+      "form": "spool",
+      "mounted": false,
+      "netWeightG": 1000,
+      "remainingPct": 100,
+      "sealed": true,
+      "dryState": "dry",
+      "location": {
+        "kind": "storage"
+      },
+      "id": "9b66ee99-fc62-4e94-a497-93e667d66ad9",
+      "addedAt": "2026-09-22T13:20:44.146Z"
+    },
+    {
+      "brand": "Elegoo",
       "material": "PLA",
       "colorName": "White",
       "hex": "#FFFFFF",
@@ -112,5 +129,5 @@
     }
   ],
   "emptySpools": 5,
-  "updatedAt": "2026-09-22T13:20:17.076Z"
+  "updatedAt": "2026-09-22T13:20:44.146Z"
 }
