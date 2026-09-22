@@ -18,6 +18,24 @@
   ],
   "spools": [
     {
+      "brand": "Bambu Lab",
+      "material": "PLA Basic",
+      "colorName": "White Jade",
+      "hex": "#ECEADE",
+      "form": "refill",
+      "mounted": true,
+      "netWeightG": 1000,
+      "remainingPct": 90,
+      "sealed": false,
+      "openedAt": "2026-09-22T13:39:14.940Z",
+      "dryState": "dry",
+      "location": {
+        "kind": "storage"
+      },
+      "id": "b49e19d2-7093-4ea3-80f8-0d2bdddae213",
+      "addedAt": "2026-09-22T13:39:14.941Z"
+    },
+    {
       "brand": "Elegoo",
       "material": "PETG Translucent",
       "colorName": "Amber",
@@ -436,6 +454,6 @@
       "addedAt": "2026-09-21T18:13:14.187Z"
     }
   ],
-  "emptySpools": 5,
-  "updatedAt": "2026-09-22T13:37:57.996Z"
+  "emptySpools": 4,
+  "updatedAt": "2026-09-22T13:39:14.941Z"
 }
