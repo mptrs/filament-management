@@ -1,9 +1,961 @@
 [
  {
   "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Jade White",
+  "hex": "#FFFFFF",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Red",
+  "hex": "#C12E1F",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Blue",
+  "hex": "#0A2989",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Gray",
+  "hex": "#8E9089",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Bambu Green",
+  "hex": "#00AE42",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Mistletoe Green",
+  "hex": "#3F8E43",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Cyan",
+  "hex": "#0086D6",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Sunflower Yellow",
+  "hex": "#FEC600",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Indigo Purple",
+  "hex": "#482960",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Cocoa Brown",
+  "hex": "#6F5034",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Hot Pink",
+  "hex": "#F5547C",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Pumpkin Orange",
+  "hex": "#FF9016",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Magenta",
+  "hex": "#EC008C",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Gold",
+  "hex": "#E4BD68",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Purple",
+  "hex": "#5E43B7",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Beige",
+  "hex": "#F7E6DE",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Pink",
+  "hex": "#F55A74",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Bronze",
+  "hex": "#847D48",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Turquoise",
+  "hex": "#00B1B7",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Light Gray",
+  "hex": "#D1D3D5",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Yellow",
+  "hex": "#F4EE2A",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Blue Grey",
+  "hex": "#5B6579",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Silver",
+  "hex": "#A6A9AA",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Orange",
+  "hex": "#FF6A13",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Bright Green",
+  "hex": "#BECF00",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Brown",
+  "hex": "#9D432C",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Dark Gray",
+  "hex": "#545454",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Maroon Red",
+  "hex": "#9D2235",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "Cobalt Blue",
+  "hex": "#0056B8",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Basic",
+  "color": "JadeWhite",
+  "hex": "#FFFFFF",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Ivory White",
+  "hex": "#FFFFFF",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Bone White",
+  "hex": "#CBC6B8",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Desert Tan",
+  "hex": "#E8DBB7",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Latte Brown",
+  "hex": "#D3B7A7",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Caramel",
+  "hex": "#AE835B",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Terracotta",
+  "hex": "#B15533",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Dark Brown",
+  "hex": "#7D6556",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Dark Chocolate",
+  "hex": "#4D3324",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Lilac Purple",
+  "hex": "#AE96D4",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Sakura Pink",
+  "hex": "#E8AFCF",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Mandarin Orange",
+  "hex": "#F99963",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Lemon Yellow",
+  "hex": "#F7D959",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Plum",
+  "hex": "#950051",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Scarlet Red",
+  "hex": "#DE4343",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Dark Red",
+  "hex": "#BB3D43",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Dark Green",
+  "hex": "#68724D",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Grass Green",
+  "hex": "#61C680",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Apple Green",
+  "hex": "#C2E189",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Ice Blue",
+  "hex": "#A3D8E1",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Sky Blue",
+  "hex": "#56B7E6",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Marine Blue",
+  "hex": "#0078BF",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Dark Blue",
+  "hex": "#042F56",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Ash Gray",
+  "hex": "#9B9EA0",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Nardo Gray",
+  "hex": "#757575",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Matte",
+  "color": "Charcoal",
+  "hex": "#000000",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Silver",
+  "hex": "#C8C8C8",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Champagne",
+  "hex": "#F3CFB2",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Pink",
+  "hex": "#F7ADA6",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Rose Gold",
+  "hex": "#BA9594",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Candy Red",
+  "hex": "#D02727",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Gold",
+  "hex": "#F4A925",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Mint",
+  "hex": "#96DCB9",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Candy Green",
+  "hex": "#018814",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Baby Blue",
+  "hex": "#A8C6EE",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Blue",
+  "hex": "#008BDA",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Purple",
+  "hex": "#8671CB",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Silk+",
+  "color": "Titan Gray",
+  "hex": "#5F6367",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Translucent",
+  "color": "Teal",
+  "hex": "#009FA1",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Translucent",
+  "color": "Light Jade",
+  "hex": "#96D8AF",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Translucent",
+  "color": "Blue",
+  "hex": "#0047BB",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Translucent",
+  "color": "Mellow Yellow",
+  "hex": "#F5DBAB",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Translucent",
+  "color": "Purple",
+  "hex": "#8344B0",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Translucent",
+  "color": "Cherry Pink",
+  "hex": "#F5B6CD",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Translucent",
+  "color": "Orange",
+  "hex": "#F74E02",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Translucent",
+  "color": "Ice Blue",
+  "hex": "#B8CDE9",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Translucent",
+  "color": "Red",
+  "hex": "#B50011",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Translucent",
+  "color": "Lavender",
+  "hex": "#B8ACD6",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Sparkle",
+  "color": "Classic Gold Sparkle",
+  "hex": "#CEA629",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Sparkle",
+  "color": "Slate Gray Sparkle",
+  "hex": "#8E9089",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Sparkle",
+  "color": "Crimson Red Sparkle",
+  "hex": "#792B36",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Sparkle",
+  "color": "Royal Purple Sparkle",
+  "hex": "#483D8B",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Sparkle",
+  "color": "Alpine Green Sparkle",
+  "hex": "#3F5443",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Sparkle",
+  "color": "Onyx Black Sparkle",
+  "hex": "#2D2B28",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Galaxy",
+  "color": "Brown (Brown base with gold shimmer)",
+  "hex": "#684A43",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Galaxy",
+  "color": "Green (Green base with gold shimmer)",
+  "hex": "#3B665E",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Galaxy",
+  "color": "Nebulae (Deep blue base with green shimmer)",
+  "hex": "#424379",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Galaxy",
+  "color": "Purple (Purple base with blue shimmer)",
+  "hex": "#594177",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Metal",
+  "color": "Iridium Gold Metallic",
+  "hex": "#B39B84",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Metal",
+  "color": "Copper Brown Metallic",
+  "hex": "#AA6443",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Metal",
+  "color": "Oxide Green Metallic",
+  "hex": "#1D7C6A",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Metal",
+  "color": "Cobalt Blue Metallic",
+  "hex": "#39699E",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Metal",
+  "color": "Iron Gray Metallic",
+  "hex": "#43403D",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Wood",
+  "color": "White Oak",
+  "hex": "#D6CCA3",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Wood",
+  "color": "Ochre Yellow",
+  "hex": "#C98935",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Wood",
+  "color": "Clay Brown",
+  "hex": "#995F11",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Wood",
+  "color": "Classic Birch",
+  "hex": "#918669",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Wood",
+  "color": "Rosewood",
+  "hex": "#4C241C",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Wood",
+  "color": "Black Walnut",
+  "hex": "#4F3F24",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Marble",
+  "color": "White Marble",
+  "hex": "#F7F3F0",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA Marble",
+  "color": "Red Granite",
+  "hex": "#AD4E38",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA-CF",
+  "color": "Burgundy Red",
+  "hex": "#951E23",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA-CF",
+  "color": "Iris Purple",
+  "hex": "#69398E",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA-CF",
+  "color": "Matcha Green",
+  "hex": "#5C9748",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA-CF",
+  "color": "Jeans Blue",
+  "hex": "#6E88BC",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA-CF",
+  "color": "Royal Blue",
+  "hex": "#2842AD",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA-CF",
+  "color": "Lava Gray",
+  "hex": "#4D5054",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PLA-CF",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Red",
+  "hex": "#D6001C",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Orange",
+  "hex": "#FF671F",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Yellow",
+  "hex": "#FCE300",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Reflex Blue",
+  "hex": "#001489",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Navy Blue",
+  "hex": "#0086D6",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Misty Blue",
+  "hex": "#688197",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Green",
+  "hex": "#009639",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Pine Green",
+  "hex": "#034638",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Dark Brown",
+  "hex": "#4F2C1D",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Dark Beige",
+  "hex": "#DBC8B6",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "Gray",
+  "hex": "#7F7E83",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Basic",
+  "color": "White",
+  "hex": "#FFFFFF",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Translucent",
+  "color": "Translucent Pink",
+  "hex": "#F9C1BD",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Translucent",
+  "color": "Translucent Purple",
+  "hex": "#D6ABFF",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Translucent",
+  "color": "Translucent Orange",
+  "hex": "#FF911A",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Translucent",
+  "color": "Translucent Brown",
+  "hex": "#C9A381",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Translucent",
+  "color": "Translucent Teal",
+  "hex": "#77EDD7",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Translucent",
+  "color": "Translucent Light Blue",
+  "hex": "#61B0FF",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Translucent",
+  "color": "Translucent Olive",
+  "hex": "#748C45",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG Translucent",
+  "color": "Translucent Gray",
+  "hex": "#8E8E8E",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG-CF",
+  "color": "Brick Red",
+  "hex": "#9F332A",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG-CF",
+  "color": "Violet Purple",
+  "hex": "#583061",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG-CF",
+  "color": "Indigo Blue",
+  "hex": "#324585",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG-CF",
+  "color": "Malachite Green",
+  "hex": "#16B08E",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG-CF",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PETG-CF",
+  "color": "Titan Gray",
+  "hex": "#565656",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
   "material": "ABS",
-  "color": "Azure",
-  "hex": "#489FDF",
+  "color": "White",
+  "hex": "#FFFFFF",
   "source": "bambu-official"
  },
  {
@@ -16,15 +968,15 @@
  {
   "brand": "Bambu Lab",
   "material": "ABS",
-  "color": "Black",
-  "hex": "#000000",
+  "color": "Olive",
+  "hex": "#789D4A",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
   "material": "ABS",
-  "color": "Blue",
-  "hex": "#0A2CA5",
+  "color": "Azure",
+  "hex": "#489FDF",
   "source": "bambu-official"
  },
  {
@@ -37,36 +989,8 @@
  {
   "brand": "Bambu Lab",
   "material": "ABS",
-  "color": "Olive",
-  "hex": "#789D4A",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "ABS",
-  "color": "Orange",
-  "hex": "#FF6A13",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "ABS",
-  "color": "Purple",
-  "hex": "#AF1685",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "ABS",
-  "color": "Red",
-  "hex": "#D32941",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "ABS",
-  "color": "Silver",
-  "hex": "#87909A",
+  "color": "Blue",
+  "hex": "#0A2CA5",
   "source": "bambu-official"
  },
  {
@@ -79,13 +1003,34 @@
  {
   "brand": "Bambu Lab",
   "material": "ABS",
-  "color": "White",
-  "hex": "#FFFFFF",
+  "color": "Orange",
+  "hex": "#FF6A13",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "ABS-GF",
+  "material": "ABS",
+  "color": "Red",
+  "hex": "#D32941",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "ABS",
+  "color": "Purple",
+  "hex": "#AF1685",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "ABS",
+  "color": "Silver",
+  "hex": "#87909A",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "ABS",
   "color": "Black",
   "hex": "#000000",
   "source": "bambu-official"
@@ -93,8 +1038,8 @@
  {
   "brand": "Bambu Lab",
   "material": "ABS-GF",
-  "color": "Blue",
-  "hex": "#0C3B95",
+  "color": "White",
+  "hex": "#FFFFFF",
   "source": "bambu-official"
  },
  {
@@ -121,743 +1066,274 @@
  {
   "brand": "Bambu Lab",
   "material": "ABS-GF",
-  "color": "White",
-  "hex": "#FFFFFF",
+  "color": "Blue",
+  "hex": "#0C3B95",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
+  "material": "ABS-GF",
   "color": "Black",
   "hex": "#000000",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
-  "color": "Dark Beige",
-  "hex": "#DBC8B6",
+  "material": "ASA",
+  "color": "White",
+  "hex": "#FFFAF2",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
-  "color": "Dark Brown",
-  "hex": "#4F2C1D",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG Basic",
+  "material": "ASA",
   "color": "Gray",
-  "hex": "#7F7E83",
+  "hex": "#8A949E",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
+  "material": "ASA",
+  "color": "Red",
+  "hex": "#E02928",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "ASA",
   "color": "Green",
-  "hex": "#009639",
+  "hex": "#00A6A0",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
-  "color": "Misty Blue",
-  "hex": "#688197",
+  "material": "ASA",
+  "color": "Blue",
+  "hex": "#2140B4",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
-  "color": "Navy Blue",
-  "hex": "#0086D6",
+  "material": "ASA",
+  "color": "Black",
+  "hex": "#000000",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
+  "material": "PA6-GF",
+  "color": "White",
+  "hex": "#EAEAE4",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PA6-GF",
+  "color": "Blue",
+  "hex": "#75AED8",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PA6-GF",
   "color": "Orange",
-  "hex": "#FF671F",
+  "hex": "#FF4800",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
-  "color": "Pine Green",
-  "hex": "#034638",
+  "material": "PA6-GF",
+  "color": "Brown",
+  "hex": "#5B492F",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
-  "color": "Red",
-  "hex": "#D6001C",
+  "material": "PA6-GF",
+  "color": "Yellow",
+  "hex": "#FFCE00",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
-  "color": "Reflex Blue",
-  "hex": "#001489",
+  "material": "PA6-GF",
+  "color": "Lime",
+  "hex": "#C5ED48",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
+  "material": "PA6-GF",
+  "color": "Gray",
+  "hex": "#353533",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PA6-GF",
+  "color": "Black",
+  "hex": "#000000",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "PC",
   "color": "White",
   "hex": "#FFFFFF",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Basic",
-  "color": "Yellow",
-  "hex": "#FCE300",
+  "material": "PC",
+  "color": "Transparent",
+  "hex": "#FFFFFF",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Translucent",
-  "color": "Translucent Brown",
-  "hex": "#C9A381",
+  "material": "PC",
+  "color": "Clear Black",
+  "hex": "#686865",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG Translucent",
-  "color": "Translucent Gray",
-  "hex": "#8E8E8E",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG Translucent",
-  "color": "Translucent Light Blue",
-  "hex": "#61B0FF",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG Translucent",
-  "color": "Translucent Olive",
-  "hex": "#748C45",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG Translucent",
-  "color": "Translucent Orange",
-  "hex": "#FF911A",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG Translucent",
-  "color": "Translucent Pink",
-  "hex": "#F9C1BD",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG Translucent",
-  "color": "Translucent Purple",
-  "hex": "#D6ABFF",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG Translucent",
-  "color": "Translucent Teal",
-  "hex": "#77EDD7",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG-CF",
+  "material": "PC",
   "color": "Black",
   "hex": "#000000",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PETG-CF",
-  "color": "Brick Red",
-  "hex": "#9F332A",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG-CF",
-  "color": "Indigo Blue",
-  "hex": "#324585",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG-CF",
-  "color": "Malachite Green",
-  "hex": "#16B08E",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG-CF",
-  "color": "Titan Gray",
-  "hex": "#565656",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PETG-CF",
-  "color": "Violet Purple",
-  "hex": "#583061",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Bambu Green",
-  "hex": "#00AE42",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Beige",
-  "hex": "#F7E6DE",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
+  "material": "TPU-85A",
   "color": "Black",
   "hex": "#000000",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Blue",
-  "hex": "#0A2989",
+  "material": "TPU-85A",
+  "color": "Light Cyan",
+  "hex": "#C3E2D6",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Blue Grey",
-  "hex": "#5B6579",
+  "material": "TPU-85A",
+  "color": "Neon Orange",
+  "hex": "#F68B1B",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Bright Green",
-  "hex": "#BECF00",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Bronze",
-  "hex": "#847D48",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Brown",
-  "hex": "#9D432C",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Cobalt Blue",
-  "hex": "#0056B8",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Cocoa Brown",
-  "hex": "#6F5034",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Cyan",
-  "hex": "#0086D6",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Dark Gray",
-  "hex": "#545454",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Gold",
-  "hex": "#E4BD68",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Gray",
-  "hex": "#8E9089",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Hot Pink",
-  "hex": "#F5547C",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Indigo Purple",
-  "hex": "#482960",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Jade White",
-  "hex": "#FFFFFF",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Light Gray",
-  "hex": "#D1D3D5",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Magenta",
-  "hex": "#EC008C",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Maroon Red",
-  "hex": "#9D2235",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Mistletoe Green",
-  "hex": "#3F8E43",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Orange",
-  "hex": "#FF6A13",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Pink",
-  "hex": "#F55A74",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Pumpkin Orange",
-  "hex": "#FF9016",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Purple",
-  "hex": "#5E43B7",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Red",
-  "hex": "#C12E1F",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Silver",
-  "hex": "#A6A9AA",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Sunflower Yellow",
-  "hex": "#FEC600",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Turquoise",
-  "hex": "#00B1B7",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Basic",
-  "color": "Yellow",
-  "hex": "#F4EE2A",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Apple Green",
-  "hex": "#C2E189",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Ash Gray",
-  "hex": "#9B9EA0",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Bone White",
-  "hex": "#CBC6B8",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Caramel",
-  "hex": "#AE835B",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Charcoal",
-  "hex": "#000000",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Dark Blue",
-  "hex": "#042F56",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Dark Brown",
-  "hex": "#7D6556",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Dark Chocolate",
-  "hex": "#4D3324",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Dark Green",
-  "hex": "#68724D",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Dark Red",
-  "hex": "#BB3D43",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Desert Tan",
-  "hex": "#E8DBB7",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Grass Green",
-  "hex": "#61C680",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Ice Blue",
-  "hex": "#A3D8E1",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Ivory White",
-  "hex": "#FFFFFF",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Latte Brown",
-  "hex": "#D3B7A7",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Lemon Yellow",
-  "hex": "#F7D959",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Lilac Purple",
-  "hex": "#AE96D4",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Mandarin Orange",
-  "hex": "#F99963",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Marine Blue",
-  "hex": "#0078BF",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Nardo Gray",
-  "hex": "#757575",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Plum",
-  "hex": "#950051",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Sakura Pink",
-  "hex": "#E8AFCF",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Scarlet Red",
-  "hex": "#DE4343",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Sky Blue",
-  "hex": "#56B7E6",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Matte",
-  "color": "Terracotta",
-  "hex": "#B15533",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Baby Blue",
-  "hex": "#A8C6EE",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Blue",
-  "hex": "#008BDA",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Candy Green",
-  "hex": "#018814",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Candy Red",
-  "hex": "#D02727",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Champagne",
+  "material": "TPU-85A",
+  "color": "Rose Beige (Flesh)",
   "hex": "#F3CFB2",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Gold",
-  "hex": "#F4A925",
+  "material": "TPU-85A",
+  "color": "Lime Green",
+  "hex": "#CDEA80",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Mint",
-  "hex": "#96DCB9",
+  "material": "TPU-90A",
+  "color": "Black",
+  "hex": "#000000",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Pink",
-  "hex": "#F7ADA6",
+  "material": "TPU-90A",
+  "color": "White",
+  "hex": "#FFFFEE",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Purple",
-  "hex": "#8671CB",
+  "material": "TPU-90A",
+  "color": "Grape Jelly",
+  "hex": "#D6ABFF",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Rose Gold",
-  "hex": "#BA9594",
+  "material": "TPU-90A",
+  "color": "Crystal Blue",
+  "hex": "#7EB4E1",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Silver",
-  "hex": "#C8C8C8",
+  "material": "TPU-90A",
+  "color": "Cocoa Brown",
+  "hex": "#5C4738",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Silk+",
-  "color": "Titan Gray",
-  "hex": "#5F6367",
+  "material": "TPU-90A",
+  "color": "Quicksilver",
+  "hex": "#9EA2A2",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Silk+",
+  "material": "TPU-90A",
+  "color": "Blaze",
+  "hex": "#F1AAA8",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "TPU-90A",
+  "color": "Frozen",
+  "hex": "#FFFFFF",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "TPU-95A",
   "color": "White",
   "hex": "#FFFFFF",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Translucent",
+  "material": "TPU-95A",
+  "color": "Gray",
+  "hex": "#898D8D",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "TPU-95A",
+  "color": "Yellow",
+  "hex": "#F3E600",
+  "source": "bambu-official"
+ },
+ {
+  "brand": "Bambu Lab",
+  "material": "TPU-95A",
   "color": "Blue",
-  "hex": "#0047BB",
+  "hex": "#0072CE",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Translucent",
-  "color": "Cherry Pink",
-  "hex": "#F5B6CD",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Translucent",
-  "color": "Ice Blue",
-  "hex": "#B8CDE9",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Translucent",
-  "color": "Lavender",
-  "hex": "#B8ACD6",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Translucent",
-  "color": "Light Jade",
-  "hex": "#96D8AF",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Translucent",
-  "color": "Mellow Yellow",
-  "hex": "#F5DBAB",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Translucent",
-  "color": "Orange",
-  "hex": "#F74E02",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Translucent",
-  "color": "Purple",
-  "hex": "#8344B0",
-  "source": "bambu-official"
- },
- {
-  "brand": "Bambu Lab",
-  "material": "PLA Translucent",
+  "material": "TPU-95A",
   "color": "Red",
-  "hex": "#B50011",
+  "hex": "#C8102E",
   "source": "bambu-official"
  },
  {
   "brand": "Bambu Lab",
-  "material": "PLA Translucent",
-  "color": "Teal",
-  "hex": "#009FA1",
+  "material": "TPU-95A",
+  "color": "Black",
+  "hex": "#101820",
   "source": "bambu-official"
  },
  {
@@ -1205,6 +1681,13 @@
  },
  {
   "brand": "Elegoo",
+  "material": "PLA emoji Edition",
+  "color": "Translucent",
+  "hex": "#EDECE6",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
   "material": "PLA Glow",
   "color": "Glow Blue",
   "hex": "#80CBF7",
@@ -1271,6 +1754,13 @@
   "material": "PLA Wood",
   "color": "Medium Brown",
   "hex": "#885A40",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Marble",
+  "color": "Marble",
+  "hex": "#B1B6B5",
   "source": "elegoo.com"
  },
  {
@@ -1345,6 +1835,55 @@
  },
  {
   "brand": "Elegoo",
+  "material": "PLA Sparkle",
+  "color": "Sparkle Black",
+  "hex": "#171717",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Sparkle",
+  "color": "Sparkle Gold",
+  "hex": "#F2C111",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Sparkle",
+  "color": "Sparkle Green",
+  "hex": "#0B3426",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Sparkle",
+  "color": "Sparkle Red",
+  "hex": "#6B1E1B",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Sparkle",
+  "color": "Sparkle Dark Grey",
+  "hex": "#434549",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Sparkle",
+  "color": "Sparkle Turquoise",
+  "hex": "#00777A",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Sparkle",
+  "color": "Sparkle Purplish Grey",
+  "hex": "#1E182D",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
   "material": "Rapid TPU 95A",
   "color": "Black",
   "hex": "#000000",
@@ -1362,6 +1901,20 @@
   "material": "Rapid TPU 95A",
   "color": "Red",
   "hex": "#ea140e",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Galaxy",
+  "color": "Galaxy Black",
+  "hex": "#0B1429",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Galaxy",
+  "color": "Galaxy Purple",
+  "hex": "#2B2064",
   "source": "elegoo.com"
  },
  {
@@ -1467,6 +2020,13 @@
   "material": "PLA Basic",
   "color": "Pink",
   "hex": "#F9B0BD",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Basic",
+  "color": "Translucent",
+  "hex": "#EDECE6",
   "source": "elegoo.com"
  },
  {
@@ -1745,6 +2305,13 @@
  {
   "brand": "Elegoo",
   "material": "PLA",
+  "color": "Translucent",
+  "hex": "#EDECE6",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA",
   "color": "Sky Blue",
   "hex": "#32d0ec",
   "source": "elegoo.com"
@@ -1803,6 +2370,13 @@
   "material": "TPU 95A",
   "color": "White",
   "hex": "#FFFFFF",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "TPU 95A",
+  "color": "Translucent",
+  "hex": "#EDECE6",
   "source": "elegoo.com"
  },
  {
@@ -2172,8 +2746,22 @@
  {
   "brand": "Elegoo",
   "material": "PLA Silk",
+  "color": "Silk Green Red",
+  "hex": "#A4868B",
+  "source": "elegoo-swatch"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
   "color": "Silk Silver",
   "hex": "#d5d7db",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk Blue Purple",
+  "hex": "#483CA8",
   "source": "elegoo.com"
  },
  {
@@ -2193,6 +2781,13 @@
  {
   "brand": "Elegoo",
   "material": "PLA Silk",
+  "color": "Silk Holly Green",
+  "hex": "#408E67",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
   "color": "Silk Copper",
   "hex": "#965c39",
   "source": "elegoo.com"
@@ -2200,8 +2795,71 @@
  {
   "brand": "Elegoo",
   "material": "PLA Silk",
+  "color": "Silk Black Red",
+  "hex": "#400F24",
+  "hexes": [
+   "#400F24",
+   "#871F4C"
+  ],
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk Blue Purple Black",
+  "hex": "#234F9D",
+  "hexes": [
+   "#234F9D",
+   "#023255"
+  ],
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk Blue Green Orange",
+  "hex": "#C86F23",
+  "hexes": [
+   "#C86F23",
+   "#818810",
+   "#636075"
+  ],
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
   "color": "Silk White",
   "hex": "#ffffff",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk Blue Green",
+  "hex": "#14949F",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk Black Purple",
+  "hex": "#281240",
+  "hexes": [
+   "#281240",
+   "#57268B"
+  ],
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA Silk",
+  "color": "Silk Blue Magenta",
+  "hex": "#59429F",
+  "hexes": [
+   "#59429F",
+   "#8E357F"
+  ],
   "source": "elegoo.com"
  },
  {
@@ -2391,6 +3049,13 @@
   "material": "PLA+",
   "color": "Sea Green",
   "hex": "#08b690",
+  "source": "elegoo.com"
+ },
+ {
+  "brand": "Elegoo",
+  "material": "PLA+",
+  "color": "Translucent",
+  "hex": "#EDECE6",
   "source": "elegoo.com"
  },
  {

@@ -40,44 +40,56 @@ immediately instead of waiting for a rebuild.
 
 ## The colour catalogue
 
-`src/catalog.generated.json` holds 539 colours with real hex values, so a swatch
-in the app matches what you saw when you bought the filament — 306 Bambu Lab
-across 36 ranges and 233 Elegoo across 25.
+`src/catalog.generated.json` holds 572 colours with real hex values, so a swatch
+in the app matches what you saw when you bought the filament — 324 Bambu Lab
+across 36 ranges and 248 Elegoo across 28.
 
 Four sources, merged in this order of authority:
 
 | Source | What it gives |
 | --- | --- |
-| Bambu Lab's published hex tables (one PDF per product line) | Bambu's official values, the ones their store shows |
-| elegoo.com | Elegoo's own ranges and swatch colours, straight from their shop |
+| Bambu Lab's published hex tables | 191 official colours, 21 product lines, one PDF each |
+| elegoo.com | 229 colours: their own ranges, swatch table and swatch images |
 | [SpoolmanDB](https://github.com/Donkie/SpoolmanDB) | Broad community coverage, including co-extruded multi-colour |
 | [filamentcolors.xyz](https://filamentcolors.xyz) | Measured from printed swatches; fills what is left |
 
-Elegoo run a Shopify store, so the ranges and their colour options come from
-`products.json`, and the hex values from the theme's own swatch table, which is
+Elegoo run a Shopify store, so the ranges and colour options come from
+`products.json`, and the hex values from the theme's swatch table, which is
 embedded in every product page and identical on all of them.
+
+### Reading the effect ranges
+
+Galaxy, Sparkle, Marble and the multi-colour silks are not flat colours, so
+Elegoo serve them as a swatch *image* instead of a hex. Those images are
+decoded and sampled (`scripts/lib/png.mjs` — a small PNG reader on node's own
+zlib, so the build needs no image dependencies) and the colours read out of the
+pixels.
+
+The sampler reports whether it is sure. Two clean bands, or one flat colour,
+it trusts. A gradient that averages to a colour appearing nowhere on the reel
+it flags as unsure, and those rows sort *below* the community sources so a
+listed pair of colours wins over an invented average. Sanity check: Elegoo's
+own `blue&red` swatch image samples to `#EA140E` and `#2240AF` — exactly the
+flat hexes their swatch table gives for Red and Blue.
+
+Bambu needed no sampling: they publish a flat hex table per product line, so
+going to the source was enough.
 
 Both community sources file everything under a bare family (`PLA`) and put the
 range in the colour name (`Matte Ivory White`, `RAPID PETG Blue`). The build
 splits those apart, then drops a range word the material already carries, so
-`PLA Silk / Silk Gold` becomes `PLA Silk / Gold`. Without that, the same
-filament would sit in the catalogue two or three times over.
+`PLA Silk / Silk Gold` becomes `PLA Silk / Gold`.
 
 Co-extruded filament keeps every colour it has. A dual-colour silk draws as hard
 bands rather than a blend, because a blend would invent a colour that is not on
 the reel.
-
-**Known gap:** Elegoo's effect ranges — Galaxy, Sparkle, Marble, Metallic, CMYK —
-use swatch *images* on their own site rather than a flat colour, which is fair
-for speckled filament, so most of those have no hex anywhere. A handful arrive
-via the community sources; the rest need the colour picker.
 
 Regenerate it with:
 
 ```bash
 node scripts/build-catalog.mjs              # rebuild from data/catalog-raw.json
 node scripts/build-catalog.mjs --refresh    # re-pull elegoo.com, SpoolmanDB, filamentcolors
-python3 scripts/fetch-bambu-pdfs.py         # re-parse Bambu's PDFs (needs pypdf)
+python3 scripts/fetch-bambu-pdfs.py         # re-parse Bambu's 20 PDFs (needs pypdf)
 ```
 
 Anything not in the catalogue goes in by hand with a colour picker.

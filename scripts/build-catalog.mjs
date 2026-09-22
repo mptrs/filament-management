@@ -12,6 +12,7 @@
  *   filamentcolors.xyz  measured from printed swatches, fills the gaps
  */
 import { readFile, writeFile } from 'node:fs/promises';
+import { decodePng, sampleSwatch } from './lib/png.mjs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -20,7 +21,15 @@ const RAW = join(root, 'data', 'catalog-raw.json');
 const OUT = join(root, 'src', 'catalog.generated.json');
 
 // The manufacturer always wins; community data fills what they do not publish.
-const PRIORITY = { 'bambu-official': 4, 'elegoo.com': 4, spoolmandb: 2, 'filamentcolors.xyz': 1 };
+// A swatch image the sampler was unsure about sits last: it is a real reading,
+// but a listed pair of colours beats an averaged one.
+const PRIORITY = {
+  'bambu-official': 5,
+  'elegoo.com': 5,
+  spoolmandb: 3,
+  'filamentcolors.xyz': 2,
+  'elegoo-swatch': 1,
+};
 
 const BRANDS = { ELEGOO: 'Elegoo', 'Bambu Lab': 'Bambu Lab' };
 
@@ -176,9 +185,27 @@ async function pullElegooStore() {
     const n = name.replace(/&amp;/g, '&').trim().toLowerCase();
     for (const candidate of [n, n.replace(/gray/g, 'grey'), n.replace(/grey/g, 'gray'), n.replace(/crytal/g, 'crystal')]) {
       const hit = swatches.get(candidate);
-      if (hit?.startsWith('#')) return hit;
+      if (hit) return hit;
     }
     return null;
+  };
+
+  // Effect ranges - Galaxy, Sparkle, Marble, the multi-colour silks - are
+  // served as a swatch image rather than a flat colour, so read the colours
+  // out of the image itself.
+  const sampled = new Map();
+  const readSwatch = async (url) => {
+    const full = `${url.startsWith('//') ? 'https:' : ''}${url}${url.includes('?') ? '&' : '?'}width=96`;
+    if (sampled.has(full)) return sampled.get(full);
+    let result = null;
+    try {
+      const res = await fetch(full, { headers: { 'User-Agent': UA } });
+      if (res.ok) result = sampleSwatch(decodePng(Buffer.from(await res.arrayBuffer())));
+    } catch {
+      result = null; // a swatch we cannot read is simply one we do not add
+    }
+    sampled.set(full, result);
+    return result;
   };
 
   // Bundles and multi-packs are not colour ranges.
@@ -197,10 +224,24 @@ async function pullElegooStore() {
       // Placeholder variants on bundle-style products.
       if (!name || seen.has(name) || /option\d|^\d+KG/i.test(name)) continue;
       seen.add(name);
-      const hex = lookup(name);
-      // Swatches served as an image (multi-colour, translucent) carry no hex;
-      // the community sources cover most of those.
-      if (hex) out.push({ brand: 'Elegoo', material, color: name, hex, source: 'elegoo.com' });
+      const swatch = lookup(name);
+      if (!swatch) continue;
+
+      if (swatch.startsWith('#')) {
+        out.push({ brand: 'Elegoo', material, color: name, hex: swatch, source: 'elegoo.com' });
+        continue;
+      }
+
+      const read = await readSwatch(swatch);
+      if (!read) continue;
+      out.push({
+        brand: 'Elegoo',
+        material,
+        color: name,
+        hex: read.hex,
+        hexes: read.hexes,
+        source: read.confident ? 'elegoo.com' : 'elegoo-swatch',
+      });
     }
   }
   return out;
