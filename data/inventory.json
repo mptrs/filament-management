@@ -21,7 +21,7 @@
       "brand": "Elegoo",
       "material": "PLA+",
       "colorName": "Black",
-      "hex": "#343132",
+      "hex": "#000000",
       "form": "spool",
       "mounted": false,
       "netWeightG": 1000,
@@ -39,5 +39,5 @@
     }
   ],
   "emptySpools": 5,
-  "updatedAt": "2026-09-22T05:09:30.830Z"
+  "updatedAt": "2026-09-22T05:09:45.054Z"
 }
