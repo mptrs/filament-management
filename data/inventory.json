@@ -36,27 +36,8 @@
       },
       "id": "174c1584-d03a-40f2-b5be-35a84e0735b8",
       "addedAt": "2026-09-21T18:13:14.187Z"
-    },
-    {
-      "brand": "Bambu Lab",
-      "material": "PLA Basic",
-      "colorName": "Black",
-      "hex": "#000000",
-      "form": "spool",
-      "mounted": false,
-      "netWeightG": 1000,
-      "remainingPct": 90,
-      "sealed": false,
-      "openedAt": "2026-09-21T18:12:45.658Z",
-      "dryState": "dry",
-      "location": {
-        "kind": "direct",
-        "printer": "maker-ant"
-      },
-      "id": "b229269f-4e01-4111-8c0c-8b4dab7738be",
-      "addedAt": "2026-09-21T18:12:45.658Z"
     }
   ],
-  "emptySpools": 4,
-  "updatedAt": "2026-09-22T05:09:03.923Z"
+  "emptySpools": 5,
+  "updatedAt": "2026-09-22T05:09:30.830Z"
 }
